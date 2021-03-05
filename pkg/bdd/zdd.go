@@ -4,51 +4,61 @@ import (
 // 	"fmt"
 )
 
-type BDDTerminalValue bool
+type ZDDTerminalValue bool
 
-type BDD struct {
+type ZDD struct {
 	*NodeManager
 	*UniqueTable
-	values    map[*Node]BDDTerminalValue
-	terminals map[BDDTerminalValue]*Node
+	values    map[*Node]ZDDTerminalValue
+	terminals map[ZDDTerminalValue]*Node
 	one       *Node
 	zero      *Node
-	notBDD    *NotBDD
-	orBDD     *OrBDD
-	andBDD    *AndBDD
-	xorBDD    *XorBDD
+	notZDD    *NotZDD
+	unionZDD  *OrZDD
+	insectZDD *AndZDD
+	diffZDD   *XorZDD
+	prodZDD   *AndZDD
+	// plusZDD   *OrZDD
 }
 
-func NewBDD() *BDD {
-	d := &BDD{
+func NewZDD() *ZDD {
+	d := &ZDD{
 		NodeManager: NewNodeManager(0),
 		UniqueTable: NewUniqueTable(),
-		values:      make(map[*Node]BDDTerminalValue),
-		terminals:   make(map[BDDTerminalValue]*Node),
+		values:      make(map[*Node]ZDDTerminalValue),
+		terminals:   make(map[ZDDTerminalValue]*Node),
 	}
-	d.notBDD = &NotBDD{
+	d.notZDD = &NotZDD{
 		UniqueTable: NewUniqueTable(),
 		d:           d,
 	}
-	d.orBDD = &OrBDD{
+	d.unionZDD = &OrZDD{
 		UniqueTable: NewUniqueTable(),
 		d:           d,
 	}
-	d.andBDD = &AndBDD{
+	d.insectZDD = &AndZDD{
 		UniqueTable: NewUniqueTable(),
 		d:           d,
 	}
-	d.xorBDD = &XorBDD{
+	d.diffZDD = &XorZDD{
 		UniqueTable: NewUniqueTable(),
 		d:           d,
 	}
+	d.prodZDD = &AndZDD{
+		UniqueTable: NewUniqueTable(),
+		d:           d,
+	}
+	// d.plusZDD = &OrZDD{
+	// 	UniqueTable: NewUniqueTable(),
+	// 	d:           d,
+	// }
 	h := d.NewHeader("", nil)
 	d.zero = d.Terminal(h, false)
 	d.one = d.Terminal(h, true)
 	return d
 }
 
-func (d *BDD) CreateNode(xs []int) *Node {
+func (d *ZDD) CreateNode(xs []int) *Node {
 	var zero, one *Node
 	if xs[0] == 0 {
 		zero, one = d.one, d.zero
@@ -70,41 +80,53 @@ func (d *BDD) CreateNode(xs []int) *Node {
 	return one
 }
 
-func (d *BDD) Not(f *Node) *Node {
-	return d.UniApply(d.notBDD, f)
+func (d *ZDD) Not(f *Node) *Node {
+	return d.UniApply(d.notZDD, f)
 }
 
-func (d *BDD) And(x ...*Node) *Node {
+func (d *ZDD) Intersect(x ...*Node) *Node {
 	result := x[0]
 	for i := 1; i < len(x); i++ {
-		result = d.BinApply(d.andBDD, result, x[i])
+		result = d.BinApply(d.insectZDD, result, x[i])
 	}
 	return result
 }
 
-func (d *BDD) Or(x ...*Node) *Node {
+func (d *ZDD) Union(x ...*Node) *Node {
 	result := x[0]
 	for i := 1; i < len(x); i++ {
-		result = d.BinApply(d.orBDD, result, x[i])
+		result = d.BinApply(d.unionZDD, result, x[i])
 	}
 	return result
 }
 
-func (d *BDD) Xor(x ...*Node) *Node {
+func (d *ZDD) Setdiff(x ...*Node) *Node {
 	result := x[0]
 	for i := 1; i < len(x); i++ {
-		result = d.BinApply(d.xorBDD, result, x[i])
+		result = d.BinApply(d.diffZDD, result, x[i])
 	}
 	return result
 }
 
-func (d *BDD) Ite(f, g, h *Node) *Node {
-	return d.Or(d.And(f, g), d.And(d.Not(f), h))
+func (d *ZDD) Product(x ...*Node) *Node {
+	result := x[0]
+	for i := 1; i < len(x); i++ {
+		result = d.BinApply2(d.prodZDD, result, x[i])
+	}
+	return result
 }
 
-func (d *BDD) Node(header *NodeHeader, nodes ...*Node) *Node {
+// func (d *ZDD) Plus(x ...*Node) *Node {
+// 	result := x[0]
+// 	for i := 1; i < len(x); i++ {
+// 		result = d.BinApply2(d.plusZDD, result, x[i])
+// 	}
+// 	return result
+// }
+
+func (d *ZDD) Node(header *NodeHeader, nodes ...*Node) *Node {
 	// reduction
-	if nodes[0] == nodes[1] {
+	if nodes[1] == d.zero {
 		return nodes[0]
 	}
 	// sharing
@@ -117,7 +139,7 @@ func (d *BDD) Node(header *NodeHeader, nodes ...*Node) *Node {
 	return node
 }
 
-func (d *BDD) Terminal(header *NodeHeader, x BDDTerminalValue) *Node {
+func (d *ZDD) Terminal(header *NodeHeader, x ZDDTerminalValue) *Node {
 	if n, ok := d.terminals[x]; ok {
 		return n
 	} else {
@@ -128,15 +150,15 @@ func (d *BDD) Terminal(header *NodeHeader, x BDDTerminalValue) *Node {
 	}
 }
 
-func (d *BDD) GetValue(n *Node) BDDTerminalValue {
+func (d *ZDD) GetValue(n *Node) ZDDTerminalValue {
 	if v, ok := d.values[n]; ok {
 		return v
 	} else {
-		panic("Cannot find a value for a given node.")
+		panic("!")
 	}
 }
 
-func (d *BDD) UniApply(op UniOperator, f *Node) *Node {
+func (d *ZDD) UniApply(op UniOperator, f *Node) *Node {
 	if node, ok := op.checkTerminal(f); ok {
 		return node
 	}
@@ -151,7 +173,7 @@ func (d *BDD) UniApply(op UniOperator, f *Node) *Node {
 	return result
 }
 
-func (d *BDD) BinApply(op BinOperator, f, g *Node) *Node {
+func (d *ZDD) BinApply(op BinOperator, f, g *Node) *Node {
 	if node, ok := op.checkTerminal(f, g); ok {
 		return node
 	}
@@ -159,16 +181,15 @@ func (d *BDD) BinApply(op BinOperator, f, g *Node) *Node {
 	if node, ok := op.Get(key); ok {
 		return node
 	}
-
 	var result *Node
 	switch {
 	case f.header.level > g.header.level:
 		node0 := d.BinApply(op, f.nodes[0], g)
-		node1 := d.BinApply(op, f.nodes[1], g)
+		node1 := d.BinApply(op, f.nodes[1], d.zero)
 		result = d.Node(f.header, node0, node1)
 	case f.header.level < g.header.level:
 		node0 := d.BinApply(op, f, g.nodes[0])
-		node1 := d.BinApply(op, f, g.nodes[1])
+		node1 := d.BinApply(op, d.zero, g.nodes[1])
 		result = d.Node(g.header, node0, node1)
 	case f.header.level == g.header.level:
 		node0 := d.BinApply(op, f.nodes[0], g.nodes[0])
@@ -179,27 +200,54 @@ func (d *BDD) BinApply(op BinOperator, f, g *Node) *Node {
 	return result
 }
 
-type NotBDD struct {
-	*UniqueTable
-	d *BDD
+func (d *ZDD) BinApply2(op BinOperator, f, g *Node) *Node {
+	if node, ok := op.checkTerminal(f, g); ok {
+		return node
+	}
+	key := op.GenKey(f, g)
+	if node, ok := op.Get(key); ok {
+		return node
+	}
+	var result *Node
+	switch {
+	case f.header.level > g.header.level:
+		node0 := d.BinApply2(op, f.nodes[0], g)
+		node1 := d.BinApply2(op, f.nodes[1], g)
+		result = d.Node(f.header, node0, node1)
+	case f.header.level < g.header.level:
+		node0 := d.BinApply2(op, f, g.nodes[0])
+		node1 := d.BinApply2(op, f, g.nodes[1])
+		result = d.Node(g.header, node0, node1)
+	case f.header.level == g.header.level:
+		node0 := d.BinApply2(op, f.nodes[0], g.nodes[0])
+		node1 := d.BinApply2(op, f.nodes[1], g.nodes[1])
+		result = d.Node(f.header, node0, node1)
+	}
+	op.Set(key, result)
+	return result
 }
 
-type OrBDD struct {
+type NotZDD struct {
 	*UniqueTable
-	d *BDD
+	d *ZDD
 }
 
-type AndBDD struct {
+type OrZDD struct {
 	*UniqueTable
-	d *BDD
+	d *ZDD
 }
 
-type XorBDD struct {
+type AndZDD struct {
 	*UniqueTable
-	d *BDD
+	d *ZDD
 }
 
-func (op *NotBDD) checkTerminal(node *Node) (*Node, bool) {
+type XorZDD struct {
+	*UniqueTable
+	d *ZDD
+}
+
+func (op *NotZDD) checkTerminal(node *Node) (*Node, bool) {
 	switch {
 	case node.isTerminal():
 		return op.d.Terminal(node.header, !op.d.GetValue(node)), true
@@ -207,7 +255,7 @@ func (op *NotBDD) checkTerminal(node *Node) (*Node, bool) {
 	return nil, false
 }
 
-func (op *OrBDD) checkTerminal(f, g *Node) (*Node, bool) {
+func (op *OrZDD) checkTerminal(f, g *Node) (*Node, bool) {
 	switch {
 	case f.isTerminal() && g.isTerminal():
 		return op.d.Terminal(f.header, op.d.GetValue(f) || op.d.GetValue(g)), true
@@ -218,12 +266,12 @@ func (op *OrBDD) checkTerminal(f, g *Node) (*Node, bool) {
 		// case f.isTerminal() && op.d.GetValue(f) == true:
 		// 	return op.d.Terminal(f.header, true), true
 		// case g.isTerminal() && op.d.GetValue(g) == true:
-		// 	return op.d.Terminal(g.header, true), true
+		// 	return op.d.Terminal(g.header, false), true
 	}
 	return nil, false
 }
 
-func (op *AndBDD) checkTerminal(f, g *Node) (*Node, bool) {
+func (op *AndZDD) checkTerminal(f, g *Node) (*Node, bool) {
 	switch {
 	case f.isTerminal() && g.isTerminal():
 		return op.d.Terminal(f.header, op.d.GetValue(f) && op.d.GetValue(g)), true
@@ -239,7 +287,7 @@ func (op *AndBDD) checkTerminal(f, g *Node) (*Node, bool) {
 	return nil, false
 }
 
-func (op *XorBDD) checkTerminal(f, g *Node) (*Node, bool) {
+func (op *XorZDD) checkTerminal(f, g *Node) (*Node, bool) {
 	switch {
 	case f.isTerminal() && g.isTerminal():
 		if op.d.GetValue(f) == op.d.GetValue(g) {
@@ -247,14 +295,6 @@ func (op *XorBDD) checkTerminal(f, g *Node) (*Node, bool) {
 		} else {
 			return op.d.Terminal(f.header, true), true
 		}
-		// case f.isTerminal() && op.d.GetValue(f) == false:
-		// 	return g, true
-		// case g.isTerminal() && op.d.GetValue(g) == false:
-		// 	return f, true
-		// case f.isTerminal() && op.d.GetValue(f) == true:
-		// 	return op.d.UniApply(op.d.notBDD, g), true
-		// case g.isTerminal() && op.d.GetValue(g) == true:
-		// 	return op.d.UniApply(op.d.notBDD, f), true
 	}
 	return nil, false
 }

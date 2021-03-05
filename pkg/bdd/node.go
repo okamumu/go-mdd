@@ -29,23 +29,23 @@ func (n *Node) isTerminal() bool {
 
 type NodeManager struct {
 	id      NodeId
-	headers map[string]*NodeHeader
+	headers []*NodeHeader
 }
 
 func NewNodeManager(start_id NodeId) *NodeManager {
 	return &NodeManager{
 		id:      start_id,
-		headers: make(map[string]*NodeHeader),
+		headers: make([]*NodeHeader, 0),
 	}
 }
 
-func (ng *NodeManager) NewHeader(label string, level Level, domain []DomainInt) *NodeHeader {
+func (ng *NodeManager) NewHeader(label string, domain []DomainInt) *NodeHeader {
 	h := &NodeHeader{
-		level:  level,
+		level:  Level(len(ng.headers)),
 		label:  label,
 		domain: domain,
 	}
-	ng.headers[label] = h
+	ng.headers = append(ng.headers, h)
 	return h
 }
 
@@ -81,6 +81,17 @@ func NewUniqueTable() *UniqueTable {
 
 func (t *UniqueTable) GenKey(nodes ...*Node) string {
 	t.key = t.key[:0]
+	for _, x := range nodes {
+		t.key = append(t.key, strconv.Itoa(int(x.id))...)
+		t.key = append(t.key, ',')
+	}
+	return string(t.key)
+}
+
+func (t *UniqueTable) GenNodeKey(level Level, nodes ...*Node) string {
+	t.key = t.key[:0]
+	t.key = append(t.key, strconv.Itoa(int(level))...)
+	t.key = append(t.key, ',')
 	for _, x := range nodes {
 		t.key = append(t.key, strconv.Itoa(int(x.id))...)
 		t.key = append(t.key, ',')

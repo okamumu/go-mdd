@@ -8,15 +8,15 @@ import (
 
 func TestNode1(t *testing.T) {
 	m := NewNodeManager(0)
-	m.NewHeader("x", 1, []DomainInt{0, 1, 2})
-	m.NewHeader("y", 2, []DomainInt{0, 1, 2})
+	m.NewHeader("x", []DomainInt{0, 1, 2})
+	m.NewHeader("y", []DomainInt{0, 1, 2})
 	fmt.Println(m)
 }
 
 func TestNode2(t *testing.T) {
 	m := NewNodeManager(0)
-	h1 := m.NewHeader("x", 1, []DomainInt{0, 1, 2})
-	h2 := m.NewHeader("y", 2, []DomainInt{0, 1, 2})
+	h1 := m.NewHeader("x", []DomainInt{0, 1, 2})
+	h2 := m.NewHeader("y", []DomainInt{0, 1, 2})
 	fmt.Println(m)
 	n1 := m.NewNode(h1, nil)
 	fmt.Println(n1)
@@ -29,8 +29,8 @@ func TestNode2(t *testing.T) {
 func TestUniqueTable1(t *testing.T) {
 	table := NewUniqueTable()
 	m := NewNodeManager(0)
-	h1 := m.NewHeader("x", 1, []DomainInt{0, 1, 2})
-	h2 := m.NewHeader("y", 2, []DomainInt{0, 1, 2})
+	h1 := m.NewHeader("x", []DomainInt{0, 1, 2})
+	h2 := m.NewHeader("y", []DomainInt{0, 1, 2})
 	fmt.Println(m)
 	n1 := m.NewNode(h1, nil)
 	fmt.Println(n1)
@@ -48,8 +48,8 @@ func TestUniqueTable1(t *testing.T) {
 
 func TestNode3(t *testing.T) {
 	m := NewNodeManager(0)
-	h1 := m.NewHeader("x", 0, []DomainInt{0, 1, 2})
-	h2 := m.NewHeader("y", 2, []DomainInt{0, 1, 2})
+	h1 := m.NewHeader("x", []DomainInt{0, 1, 2})
+	h2 := m.NewHeader("y", []DomainInt{0, 1, 2})
 	fmt.Println(m)
 	n1 := m.NewNode(h1, nil)
 	fmt.Println(n1)
