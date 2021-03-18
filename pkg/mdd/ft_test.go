@@ -2,48 +2,15 @@ package bdd
 
 import (
 	"fmt"
-	"testing"
 	"sort"
+	"testing"
 )
-
-// utils
-
-func (d *ZDD) todot(x *Node) {
-	x.ToDot(func(x *Node) string {
-		if x == d.one {
-			return "1"
-		} else {
-			return "0"
-		}
-	})
-}
-
-func NewZDDWithLabels(labels []int) (*ZDD, map[int]*Node) {
-	d := NewZDD()
-	for _, i := range labels {
-		d.NewHeader(fmt.Sprint(i), []DomainInt{0, 1})
-	}
-	nodes := make(map[int]*Node)
-	for _, i := range labels {
-		// make create vector
-		x := []int{1}
-		for _, j := range labels {
-			if i != j {
-				x = append(x, 0)
-			} else {
-				x = append(x, 1)
-			}
-		}
-		nodes[i] = d.CreateNode(x)
-	}
-	return d, nodes
-}
 
 func linrange(x0 float64, x1 float64, n int) []float64 {
 	ans := make([]float64, n, n)
 	x := x0
 	d := (x1 - x0) / float64(n-1)
-	for i,_ := range ans {
+	for i, _ := range ans {
 		ans[i] = x
 		x += d
 	}
@@ -51,7 +18,7 @@ func linrange(x0 float64, x1 float64, n int) []float64 {
 }
 
 func makeTestData() ([]int, [][]int) {
-		data := [][]float64{
+	data := [][]float64{
 		{0.2799439284864673, 0.019039179685146124},
 		{0.17006659269016278, 0.26812585079180584},
 		{0.37160535186424815, 0.28336464179809084},
@@ -100,7 +67,47 @@ func makeTestData() ([]int, [][]int) {
 			result = append(result, v)
 		}
 	}
+	// for _, x := range result {
+	// 	for i := 0; i < 20; i++ {
+	// 		if i < len(x) {
+	// 			fmt.Print(x[i], " ")
+	// 		} else {
+	// 			fmt.Print(0, " ")
+	// 		}
+	// 	}
+	// 	fmt.Println()
+	// }
 	return labels, result
+}
+
+func (d *BDD) getmcs(x *Node) [][]string {
+	switch {
+	case x == d.one:
+		return [][]string{[]string{}}
+	case x == d.zero:
+		return [][]string{}
+	default:
+		result0 := d.getmcs(x.nodes[0])
+		result1 := d.getmcs(x.nodes[1])
+		for i, _ := range result1 {
+			result1[i] = append(result1[i], x.header.label)
+		}
+		ans := append(result0, result1...)
+		sort.Slice(ans, func(i, j int) bool {
+			if len(ans[i]) < len(ans[j]) {
+				return true
+			} else {
+				return false
+			}
+		})
+		s := [][]string{}
+		for i := 0; i < len(ans); i++ {
+			if isIncludeList(ans[i], s) == false {
+				s = append(s, ans[i])
+			}
+		}
+		return s
+	}
 }
 
 func (d *ZDD) getmcs(x *Node) [][]string {
@@ -112,7 +119,7 @@ func (d *ZDD) getmcs(x *Node) [][]string {
 	default:
 		result0 := d.getmcs(x.nodes[0])
 		result1 := d.getmcs(x.nodes[1])
-		for i,_ := range result1 {
+		for i, _ := range result1 {
 			result1[i] = append(result1[i], x.header.label)
 		}
 		ans := append(result0, result1...)
@@ -160,54 +167,10 @@ func hasWord(w string, s []string) bool {
 	return false
 }
 
-// tests
-
-func TestZDD1(t *testing.T) {
-	f := NewZDD()
-	one := f.terminals[true]
-	zero := f.terminals[false]
-	fmt.Println(one)
-	fmt.Println(zero)
-	h1 := f.NewHeader("x", []DomainInt{0, 1})
-	h2 := f.NewHeader("y", []DomainInt{0, 1})
-	fmt.Println(h1, h2)
-	x := f.Node(h2, f.Node(h1, one, zero), f.Node(h1, one, zero))
-	// v1 := f.Node(h1, zero, zero)
-	// v2 := f.Node(h1, one, one)
-	// v1.ToDot(func(x *Node) string {
-	// 	if x == one {
-	// 		return "1"
-	// 	} else {
-	// 		return "0"
-	// 	}
-	// })
-	// v2.ToDot(func(x *Node) string {
-	// 	if x == one {
-	// 		return "1"
-	// 	} else {
-	// 		return "0"
-	// 	}
-	// })
-	y := f.Node(h2, f.Node(h1, zero, zero), f.Node(h1, one, one))
-	z := f.Intersect(x, y)
-	fmt.Println(z)
-	f.todot(x)
-	f.todot(y)
-	f.todot(z)
-}
-
-func TestCreateZDD1(t *testing.T) {
-	d := NewZDD()
-	d.NewHeader("x1", []DomainInt{0, 1})
-	d.NewHeader("x2", []DomainInt{0, 1})
-	d.NewHeader("x3", []DomainInt{0, 1})
-	x := d.CreateNode([]int{1, 0, 1, 0})
-	d.todot(x)
-}
-
-func TestZDDFT1(t *testing.T) {
+func BenchmarkZDDFT(b *testing.B) {
 	labels, result := makeTestData()
 	d, vars := NewZDDWithLabels(labels)
+	b.ResetTimer()
 	fts := []*Node{}
 	for _, xs := range result {
 		ans := vars[xs[0]]
@@ -217,18 +180,23 @@ func TestZDDFT1(t *testing.T) {
 		fts = append(fts, ans)
 	}
 	ft := d.Union(fts...)
-	d.todot(ft)
+	fmt.Println(ft)
 }
 
-func TestZDDFT2(t *testing.T) {
-	// fmt.Println(isInclude([]string{"1", "2"}, []string{"1", "2", "3"}))
-	labels := []int{1, 2, 3, 4, 5, 6, 7}
-	d, vars := NewZDDWithLabels(labels)
-	ft := d.Union(d.Product(vars[2]), d.Product(vars[4], vars[6], vars[7]), d.Product(vars[3], vars[5], vars[2]),
-		d.Product(vars[1], vars[7], vars[3]), d.Product(vars[5], vars[7], vars[3]), d.Product(vars[1], vars[2], vars[6]))
-	d.todot(ft)
-	result := d.getmcs(ft)
-	fmt.Println(result)
+func BenchmarkBDDFT(b *testing.B) {
+	labels, result := makeTestData()
+	d, vars := NewBDDWithLabels(labels)
+	b.ResetTimer()
+	fts := []*Node{}
+	for _, xs := range result {
+		ans := vars[xs[0]]
+		for i := 1; i < len(xs); i++ {
+			ans = d.And(ans, vars[xs[i]])
+		}
+		fts = append(fts, ans)
+	}
+	ft := d.Or(fts...)
+	fmt.Println(ft)
 }
 
 func TestZDDFTMCS1(t *testing.T) {
@@ -247,4 +215,3 @@ func TestZDDFTMCS1(t *testing.T) {
 	mcs := d.getmcs(ft)
 	fmt.Println(mcs)
 }
-

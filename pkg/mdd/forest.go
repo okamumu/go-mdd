@@ -4,15 +4,15 @@ package bdd
 // // 	"fmt"
 // )
 
-type UniOperator interface {
-	UniqueTableInterface
-	checkTerminal(node *Node) (*Node, bool)
-}
+// type UniOperator interface {
+// 	UniqueTableInterface
+// 	checkTerminal(node *Node) (*Node, bool)
+// }
 
-type BinOperator interface {
-	UniqueTableInterface
-	checkTerminal(left, right *Node) (*Node, bool)
-}
+// type BinOperator interface {
+// 	UniqueTableInterface
+// 	checkTerminal(left, right *Node) (*Node, bool)
+// }
 
 // type Forest interface {
 // 	Node(header *NodeHeader, nodes ...*Node) *Node
