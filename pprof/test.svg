@@ -293,789 +293,751 @@ function handleMouseUp(evt) {
 		state = '';
 	}
 }
-]]></script><g id="viewport" transform="scale(0.5,0.5) translate(0,0)"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1480)">
+]]></script><g id="viewport" transform="scale(0.5,0.5) translate(0,0)"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1626)">
 <title>test.bin</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-1480 1213.5,-1480 1213.5,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-1626 943.5,-1626 943.5,4 -4,4"/>
 <g id="clust1" class="cluster">
 <title>cluster_L</title>
-<polygon fill="none" stroke="#000000" points="8,-1317 8,-1468 520,-1468 520,-1317 8,-1317"/>
+<polygon fill="none" stroke="#000000" points="8,-1463 8,-1614 500,-1614 500,-1463 8,-1463"/>
 </g>
 <!-- File: test.bin -->
 <g id="node1" class="node">
 <title>File: test.bin</title>
 <g id="a_node1"><a xlink:title="test.bin">
-<polygon fill="#f8f8f8" stroke="#000000" points="512,-1460 16,-1460 16,-1325 512,-1325 512,-1460"/>
-<text text-anchor="start" x="24" y="-1443.2" font-family="Times,serif" font-size="16.00" fill="#000000">File: test.bin</text>
-<text text-anchor="start" x="24" y="-1425.2" font-family="Times,serif" font-size="16.00" fill="#000000">Type: cpu</text>
-<text text-anchor="start" x="24" y="-1407.2" font-family="Times,serif" font-size="16.00" fill="#000000">Time: Mar 18, 2021 at 2:47am (UTC)</text>
-<text text-anchor="start" x="24" y="-1389.2" font-family="Times,serif" font-size="16.00" fill="#000000">Duration: 200.61ms, Total samples = 110ms (54.83%)</text>
-<text text-anchor="start" x="24" y="-1371.2" font-family="Times,serif" font-size="16.00" fill="#000000">Showing nodes accounting for 110ms, 100% of 110ms total</text>
-<text text-anchor="start" x="24" y="-1334.2" font-family="Times,serif" font-size="16.00" fill="#000000">See https://git.io/JfYMW for how to read the graph</text>
+<polygon fill="#f8f8f8" stroke="#000000" points="492,-1606 16,-1606 16,-1471 492,-1471 492,-1606"/>
+<text text-anchor="start" x="24" y="-1589.2" font-family="Times,serif" font-size="16.00" fill="#000000">File: test.bin</text>
+<text text-anchor="start" x="24" y="-1571.2" font-family="Times,serif" font-size="16.00" fill="#000000">Type: cpu</text>
+<text text-anchor="start" x="24" y="-1553.2" font-family="Times,serif" font-size="16.00" fill="#000000">Time: Apr 19, 2021 at 1:27am (UTC)</text>
+<text text-anchor="start" x="24" y="-1535.2" font-family="Times,serif" font-size="16.00" fill="#000000">Duration: 200.89ms, Total samples = 40ms (19.91%)</text>
+<text text-anchor="start" x="24" y="-1517.2" font-family="Times,serif" font-size="16.00" fill="#000000">Showing nodes accounting for 40ms, 100% of 40ms total</text>
+<text text-anchor="start" x="24" y="-1480.2" font-family="Times,serif" font-size="16.00" fill="#000000">See https://git.io/JfYMW for how to read the graph</text>
 </a>
 </g>
 </g>
 <!-- N1 -->
 <g id="node1" class="node">
 <title>N1</title>
-<g id="a_node1"><a xlink:title="runtime.mapassign (30ms)">
-<polygon fill="#edddd5" stroke="#b23900" points="785.5,-346 586.5,-346 586.5,-250 785.5,-250 785.5,-346"/>
-<text text-anchor="middle" x="686" y="-326" font-family="Times,serif" font-size="20.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="686" y="-304" font-family="Times,serif" font-size="20.00" fill="#000000">mapassign</text>
-<text text-anchor="middle" x="686" y="-282" font-family="Times,serif" font-size="20.00" fill="#000000">10ms (9.09%)</text>
-<text text-anchor="middle" x="686" y="-260" font-family="Times,serif" font-size="20.00" fill="#000000">of 30ms (27.27%)</text>
-</a>
-</g>
-</g>
-<!-- N27 -->
-<g id="node27" class="node">
-<title>N27</title>
-<g id="a_node27"><a xlink:title="runtime.memhash_varlen (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="680,-180 586,-180 586,-144 680,-144 680,-180"/>
-<text text-anchor="middle" x="633" y="-169.1" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="633" y="-160.1" font-family="Times,serif" font-size="8.00" fill="#000000">memhash_varlen</text>
-<text text-anchor="middle" x="633" y="-151.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N1&#45;&gt;N27 -->
-<g id="edge27" class="edge">
-<title>N1&#45;&gt;N27</title>
-<g id="a_edge27"><a xlink:title="runtime.mapassign &#45;&gt; runtime.memhash_varlen (10ms)">
-<path fill="none" stroke="#b28a61" d="M661.5107,-249.7327C658.835,-243.8206 656.2648,-237.8142 654,-232 648.6945,-218.38 643.9114,-202.8426 640.2548,-189.8717"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="643.5965,-188.8228 637.5755,-180.1051 636.8459,-190.6748 643.5965,-188.8228"/>
-</a>
-</g>
-<g id="a_edge27&#45;label"><a xlink:title="runtime.mapassign &#45;&gt; runtime.memhash_varlen (10ms)">
-<text text-anchor="middle" x="676" y="-220.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N29 -->
-<g id="node29" class="node">
-<title>N29</title>
-<g id="a_node29"><a xlink:title="runtime.typedmemmove (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="809,-180 715,-180 715,-144 809,-144 809,-180"/>
-<text text-anchor="middle" x="762" y="-169.1" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="762" y="-160.1" font-family="Times,serif" font-size="8.00" fill="#000000">typedmemmove</text>
-<text text-anchor="middle" x="762" y="-151.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N1&#45;&gt;N29 -->
-<g id="edge28" class="edge">
-<title>N1&#45;&gt;N29</title>
-<g id="a_edge28"><a xlink:title="runtime.mapassign &#45;&gt; runtime.typedmemmove (10ms)">
-<path fill="none" stroke="#b28a61" d="M713.0087,-249.6686C724.3844,-229.3122 737.1978,-206.3829 746.8667,-189.0806"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="750.0627,-190.5361 751.8857,-180.0993 743.9521,-187.1213 750.0627,-190.5361"/>
-</a>
-</g>
-<g id="a_edge28&#45;label"><a xlink:title="runtime.mapassign &#45;&gt; runtime.typedmemmove (10ms)">
-<text text-anchor="middle" x="752" y="-220.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N2 -->
-<g id="node2" class="node">
-<title>N2</title>
-<g id="a_node2"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 (50ms)">
-<polygon fill="#eddad5" stroke="#b22500" points="630.5,-1175 529.5,-1175 529.5,-1139 630.5,-1139 630.5,-1175"/>
-<text text-anchor="middle" x="580" y="-1164.1" font-family="Times,serif" font-size="8.00" fill="#000000">ft</text>
-<text text-anchor="middle" x="580" y="-1155.1" font-family="Times,serif" font-size="8.00" fill="#000000">BenchmarkBDDFT1</text>
-<text text-anchor="middle" x="580" y="-1146.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 50ms (45.45%)</text>
-</a>
-</g>
-</g>
-<!-- N10 -->
-<g id="node10" class="node">
-<title>N10</title>
-<g id="a_node10"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or (30ms)">
-<polygon fill="#edddd5" stroke="#b23900" points="629.5,-755 530.5,-755 530.5,-711 629.5,-711 629.5,-755"/>
-<text text-anchor="middle" x="580" y="-744.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
-<text text-anchor="middle" x="580" y="-735.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD)</text>
-<text text-anchor="middle" x="580" y="-726.6" font-family="Times,serif" font-size="8.00" fill="#000000">Or</text>
-<text text-anchor="middle" x="580" y="-717.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 30ms (27.27%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N10 -->
-<g id="edge8" class="edge">
-<title>N2&#45;&gt;N10</title>
-<g id="a_edge8"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or (20ms)">
-<path fill="none" stroke="#b25110" d="M560.6329,-1138.9529C547.4912,-1125.3066 531.2381,-1105.3274 524,-1084 490.1481,-984.2545 500.1605,-949.6001 524,-847 530.9303,-817.1734 546.82,-786.161 559.9099,-764.0257"/>
-<polygon fill="#b25110" stroke="#b25110" points="562.9424,-765.7749 565.1301,-755.4084 556.9552,-762.1479 562.9424,-765.7749"/>
-</a>
-</g>
-<g id="a_edge8&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or (20ms)">
-<text text-anchor="middle" x="525" y="-980.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 20ms</text>
-</a>
-</g>
-</g>
-<!-- N12 -->
-<g id="node12" class="node">
-<title>N12</title>
-<g id="a_node12"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.makeTestData (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="921,-1084 757,-1084 757,-1010 921,-1010 921,-1084"/>
-<text text-anchor="middle" x="839" y="-1064" font-family="Times,serif" font-size="20.00" fill="#000000">ft</text>
-<text text-anchor="middle" x="839" y="-1042" font-family="Times,serif" font-size="20.00" fill="#000000">makeTestData</text>
-<text text-anchor="middle" x="839" y="-1020" font-family="Times,serif" font-size="20.00" fill="#000000">10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N12 -->
-<g id="edge23" class="edge">
-<title>N2&#45;&gt;N12</title>
-<g id="a_edge23"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.makeTestData (10ms)">
-<path fill="none" stroke="#b28a61" d="M630.6752,-1139.8908C649.7427,-1133.1526 671.5168,-1125.0961 691,-1117 712.0349,-1108.2591 734.4039,-1098.1308 755.2102,-1088.3405"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="756.7936,-1091.4634 764.3351,-1084.0219 753.799,-1085.1362 756.7936,-1091.4634"/>
-</a>
-</g>
-<g id="a_edge23&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.makeTestData (10ms)">
-<text text-anchor="middle" x="745" y="-1105.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N17 -->
-<g id="node17" class="node">
-<title>N17</title>
-<g id="a_node17"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).And (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="739,-1069 645,-1069 645,-1025 739,-1025 739,-1069"/>
-<text text-anchor="middle" x="692" y="-1058.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
-<text text-anchor="middle" x="692" y="-1049.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD)</text>
-<text text-anchor="middle" x="692" y="-1040.6" font-family="Times,serif" font-size="8.00" fill="#000000">And</text>
-<text text-anchor="middle" x="692" y="-1031.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N17 -->
-<g id="edge21" class="edge">
-<title>N2&#45;&gt;N17</title>
-<g id="a_edge21"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).And (10ms)">
-<path fill="none" stroke="#b28a61" d="M603.0106,-1138.8887C611.1154,-1132.2348 620.1556,-1124.4923 628,-1117 641.2139,-1104.3792 654.9976,-1089.5471 666.3742,-1076.7922"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="669.1217,-1078.9686 673.1201,-1069.1572 663.8759,-1074.3337 669.1217,-1078.9686"/>
-</a>
-</g>
-<g id="a_edge21&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).And (10ms)">
-<text text-anchor="middle" x="665" y="-1105.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N22 -->
-<g id="node22" class="node">
-<title>N22</title>
-<g id="a_node22"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="627,-1065 533,-1065 533,-1029 627,-1029 627,-1065"/>
-<text text-anchor="middle" x="580" y="-1054.1" font-family="Times,serif" font-size="8.00" fill="#000000">ft</text>
-<text text-anchor="middle" x="580" y="-1045.1" font-family="Times,serif" font-size="8.00" fill="#000000">Ftmcs</text>
-<text text-anchor="middle" x="580" y="-1036.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N2&#45;&gt;N22 -->
-<g id="edge22" class="edge">
-<title>N2&#45;&gt;N22</title>
-<g id="a_edge22"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs (10ms)">
-<path fill="none" stroke="#b28a61" d="M580,-1138.8357C580,-1121.5595 580,-1095.309 580,-1075.2917"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="583.5001,-1075.1912 580,-1065.1912 576.5001,-1075.1913 583.5001,-1075.1912"/>
-</a>
-</g>
-<g id="a_edge22&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs (10ms)">
-<text text-anchor="middle" x="602" y="-1105.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<g id="a_node1"><a xlink:title="testing.tRunner (30ms)">
+<polygon fill="#edd7d5" stroke="#b20e00" points="609.5,-1556.5 510.5,-1556.5 510.5,-1520.5 609.5,-1520.5 609.5,-1556.5"/>
+<text text-anchor="middle" x="560" y="-1545.6" font-family="Times,serif" font-size="8.00" fill="#000000">testing</text>
+<text text-anchor="middle" x="560" y="-1536.6" font-family="Times,serif" font-size="8.00" fill="#000000">tRunner</text>
+<text text-anchor="middle" x="560" y="-1527.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 30ms (75.00%)</text>
 </a>
 </g>
 </g>
 <!-- N3 -->
 <g id="node3" class="node">
 <title>N3</title>
-<g id="a_node3"><a xlink:title="runtime.scanobject (50ms)">
-<polygon fill="#eddad5" stroke="#b22500" points="1209.5,-959 982.5,-959 982.5,-847 1209.5,-847 1209.5,-959"/>
-<text text-anchor="middle" x="1096" y="-935.8" font-family="Times,serif" font-size="24.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="1096" y="-909.8" font-family="Times,serif" font-size="24.00" fill="#000000">scanobject</text>
-<text text-anchor="middle" x="1096" y="-883.8" font-family="Times,serif" font-size="24.00" fill="#000000">20ms (18.18%)</text>
-<text text-anchor="middle" x="1096" y="-857.8" font-family="Times,serif" font-size="24.00" fill="#000000">of 50ms (45.45%)</text>
+<g id="a_node3"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 (20ms)">
+<polygon fill="#edd9d5" stroke="#b22100" points="609.5,-1420 510.5,-1420 510.5,-1384 609.5,-1384 609.5,-1420"/>
+<text text-anchor="middle" x="560" y="-1409.1" font-family="Times,serif" font-size="8.00" fill="#000000">ft</text>
+<text text-anchor="middle" x="560" y="-1400.1" font-family="Times,serif" font-size="8.00" fill="#000000">TestBDDFTMCS0</text>
+<text text-anchor="middle" x="560" y="-1391.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 20ms (50.00%)</text>
 </a>
 </g>
 </g>
-<!-- N13 -->
-<g id="node13" class="node">
-<title>N13</title>
-<g id="a_node13"><a xlink:title="runtime.heapBits.next (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="1028,-781 868,-781 868,-685 1028,-685 1028,-781"/>
-<text text-anchor="middle" x="948" y="-761" font-family="Times,serif" font-size="20.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="948" y="-739" font-family="Times,serif" font-size="20.00" fill="#000000">heapBits</text>
-<text text-anchor="middle" x="948" y="-717" font-family="Times,serif" font-size="20.00" fill="#000000">next</text>
-<text text-anchor="middle" x="948" y="-695" font-family="Times,serif" font-size="20.00" fill="#000000">10ms (9.09%)</text>
+<!-- N1&#45;&gt;N3 -->
+<g id="edge3" class="edge">
+<title>N1&#45;&gt;N3</title>
+<g id="a_edge3"><a xlink:title="testing.tRunner &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 (20ms)">
+<path fill="none" stroke="#b22100" stroke-width="3" d="M560,-1520.3739C560,-1497.3258 560,-1457.2811 560,-1430.2208"/>
+<polygon fill="#b22100" stroke="#b22100" stroke-width="3" points="563.5001,-1430.2011 560,-1420.2011 556.5001,-1430.2011 563.5001,-1430.2011"/>
 </a>
 </g>
-</g>
-<!-- N3&#45;&gt;N13 -->
-<g id="edge30" class="edge">
-<title>N3&#45;&gt;N13</title>
-<g id="a_edge30"><a xlink:title="runtime.scanobject &#45;&gt; runtime.heapBits.next (10ms)">
-<path fill="none" stroke="#b28a61" d="M1047.1291,-846.8645C1030.9211,-828.2472 1012.888,-807.5335 996.6934,-788.9316"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="999.082,-786.3449 989.876,-781.1009 993.8025,-790.9413 999.082,-786.3449"/>
-</a>
-</g>
-<g id="a_edge30&#45;label"><a xlink:title="runtime.scanobject &#45;&gt; runtime.heapBits.next (10ms)">
-<text text-anchor="middle" x="1057.5" y="-817.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-<text text-anchor="middle" x="1057.5" y="-802.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N26 -->
-<g id="node26" class="node">
-<title>N26</title>
-<g id="a_node26"><a xlink:title="runtime.greyobject (20ms)">
-<polygon fill="#ede0d7" stroke="#b25110" points="1145.5,-751 1046.5,-751 1046.5,-715 1145.5,-715 1145.5,-751"/>
-<text text-anchor="middle" x="1096" y="-740.1" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="1096" y="-731.1" font-family="Times,serif" font-size="8.00" fill="#000000">greyobject</text>
-<text text-anchor="middle" x="1096" y="-722.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 20ms (18.18%)</text>
-</a>
-</g>
-</g>
-<!-- N3&#45;&gt;N26 -->
-<g id="edge10" class="edge">
-<title>N3&#45;&gt;N26</title>
-<g id="a_edge10"><a xlink:title="runtime.scanobject &#45;&gt; runtime.greyobject (20ms)">
-<path fill="none" stroke="#b25110" d="M1096,-846.8645C1096,-818.3106 1096,-784.8255 1096,-761.591"/>
-<polygon fill="#b25110" stroke="#b25110" points="1099.5001,-761.3835 1096,-751.3836 1092.5001,-761.3836 1099.5001,-761.3835"/>
-</a>
-</g>
-<g id="a_edge10&#45;label"><a xlink:title="runtime.scanobject &#45;&gt; runtime.greyobject (20ms)">
-<text text-anchor="middle" x="1118" y="-810.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 20ms</text>
-</a>
-</g>
-</g>
-<!-- N4 -->
-<g id="node4" class="node">
-<title>N4</title>
-<g id="a_node4"><a xlink:title="runtime.gcBgMarkWorker (50ms)">
-<polygon fill="#eddad5" stroke="#b22500" points="1145.5,-1410.5 1046.5,-1410.5 1046.5,-1374.5 1145.5,-1374.5 1145.5,-1410.5"/>
-<text text-anchor="middle" x="1096" y="-1399.6" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="1096" y="-1390.6" font-family="Times,serif" font-size="8.00" fill="#000000">gcBgMarkWorker</text>
-<text text-anchor="middle" x="1096" y="-1381.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 50ms (45.45%)</text>
-</a>
-</g>
-</g>
-<!-- N28 -->
-<g id="node28" class="node">
-<title>N28</title>
-<g id="a_node28"><a xlink:title="runtime.systemstack (50ms)">
-<polygon fill="#eddad5" stroke="#b22500" points="1145.5,-1270 1046.5,-1270 1046.5,-1234 1145.5,-1234 1145.5,-1270"/>
-<text text-anchor="middle" x="1096" y="-1259.1" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="1096" y="-1250.1" font-family="Times,serif" font-size="8.00" fill="#000000">systemstack</text>
-<text text-anchor="middle" x="1096" y="-1241.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 50ms (45.45%)</text>
-</a>
-</g>
-</g>
-<!-- N4&#45;&gt;N28 -->
-<g id="edge1" class="edge">
-<title>N4&#45;&gt;N28</title>
-<g id="a_edge1"><a xlink:title="runtime.gcBgMarkWorker &#45;&gt; runtime.systemstack (50ms)">
-<path fill="none" stroke="#b22500" stroke-width="3" d="M1096,-1374.4197C1096,-1350.6034 1096,-1308.4598 1096,-1280.3758"/>
-<polygon fill="#b22500" stroke="#b22500" stroke-width="3" points="1099.5001,-1280.0109 1096,-1270.0109 1092.5001,-1280.0109 1099.5001,-1280.0109"/>
-</a>
-</g>
-<g id="a_edge1&#45;label"><a xlink:title="runtime.gcBgMarkWorker &#45;&gt; runtime.systemstack (50ms)">
-<text text-anchor="middle" x="1118" y="-1295.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 50ms</text>
-</a>
-</g>
-</g>
-<!-- N5 -->
-<g id="node5" class="node">
-<title>N5</title>
-<g id="a_node5"><a xlink:title="runtime.mapaccess2 (20ms)">
-<polygon fill="#ede0d7" stroke="#b25110" points="568.5,-346 369.5,-346 369.5,-250 568.5,-250 568.5,-346"/>
-<text text-anchor="middle" x="469" y="-326" font-family="Times,serif" font-size="20.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="469" y="-304" font-family="Times,serif" font-size="20.00" fill="#000000">mapaccess2</text>
-<text text-anchor="middle" x="469" y="-282" font-family="Times,serif" font-size="20.00" fill="#000000">10ms (9.09%)</text>
-<text text-anchor="middle" x="469" y="-260" font-family="Times,serif" font-size="20.00" fill="#000000">of 20ms (18.18%)</text>
-</a>
-</g>
-</g>
-<!-- N14 -->
-<g id="node14" class="node">
-<title>N14</title>
-<g id="a_node14"><a xlink:title="runtime.memhash128 (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="549,-199 389,-199 389,-125 549,-125 549,-199"/>
-<text text-anchor="middle" x="469" y="-179" font-family="Times,serif" font-size="20.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="469" y="-157" font-family="Times,serif" font-size="20.00" fill="#000000">memhash128</text>
-<text text-anchor="middle" x="469" y="-135" font-family="Times,serif" font-size="20.00" fill="#000000">10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N5&#45;&gt;N14 -->
-<g id="edge26" class="edge">
-<title>N5&#45;&gt;N14</title>
-<g id="a_edge26"><a xlink:title="runtime.mapaccess2 &#45;&gt; runtime.memhash128 (10ms)">
-<path fill="none" stroke="#b28a61" d="M469,-249.6686C469,-236.5355 469,-222.3314 469,-209.2584"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="472.5001,-209.0587 469,-199.0587 465.5001,-209.0587 472.5001,-209.0587"/>
-</a>
-</g>
-<g id="a_edge26&#45;label"><a xlink:title="runtime.mapaccess2 &#45;&gt; runtime.memhash128 (10ms)">
-<text text-anchor="middle" x="491" y="-220.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N6 -->
-<g id="node6" class="node">
-<title>N6</title>
-<g id="a_node6"><a xlink:title="testing.(*B).launch (50ms)">
-<polygon fill="#eddad5" stroke="#b22500" points="629.5,-1414.5 530.5,-1414.5 530.5,-1370.5 629.5,-1370.5 629.5,-1414.5"/>
-<text text-anchor="middle" x="580" y="-1404.1" font-family="Times,serif" font-size="8.00" fill="#000000">testing</text>
-<text text-anchor="middle" x="580" y="-1395.1" font-family="Times,serif" font-size="8.00" fill="#000000">(*B)</text>
-<text text-anchor="middle" x="580" y="-1386.1" font-family="Times,serif" font-size="8.00" fill="#000000">launch</text>
-<text text-anchor="middle" x="580" y="-1377.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 50ms (45.45%)</text>
-</a>
-</g>
-</g>
-<!-- N30 -->
-<g id="node30" class="node">
-<title>N30</title>
-<g id="a_node30"><a xlink:title="testing.(*B).runN (50ms)">
-<polygon fill="#eddad5" stroke="#b22500" points="629.5,-1274 530.5,-1274 530.5,-1230 629.5,-1230 629.5,-1274"/>
-<text text-anchor="middle" x="580" y="-1263.6" font-family="Times,serif" font-size="8.00" fill="#000000">testing</text>
-<text text-anchor="middle" x="580" y="-1254.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*B)</text>
-<text text-anchor="middle" x="580" y="-1245.6" font-family="Times,serif" font-size="8.00" fill="#000000">runN</text>
-<text text-anchor="middle" x="580" y="-1236.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 50ms (45.45%)</text>
-</a>
-</g>
-</g>
-<!-- N6&#45;&gt;N30 -->
-<g id="edge5" class="edge">
-<title>N6&#45;&gt;N30</title>
-<g id="a_edge5"><a xlink:title="testing.(*B).launch &#45;&gt; testing.(*B).runN (50ms)">
-<path fill="none" stroke="#b22500" stroke-width="3" d="M580,-1370.2374C580,-1347.1148 580,-1310.7061 580,-1284.3967"/>
-<polygon fill="#b22500" stroke="#b22500" stroke-width="3" points="583.5001,-1284.1585 580,-1274.1585 576.5001,-1284.1585 583.5001,-1284.1585"/>
-</a>
-</g>
-<g id="a_edge5&#45;label"><a xlink:title="testing.(*B).launch &#45;&gt; testing.(*B).runN (50ms)">
-<text text-anchor="middle" x="602" y="-1295.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 50ms</text>
-</a>
-</g>
-</g>
-<!-- N7 -->
-<g id="node7" class="node">
-<title>N7</title>
-<g id="a_node7"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or (30ms)">
-<polygon fill="#edddd5" stroke="#b23900" points="629.5,-585 530.5,-585 530.5,-541 629.5,-541 629.5,-585"/>
-<text text-anchor="middle" x="580" y="-574.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
-<text text-anchor="middle" x="580" y="-565.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD)</text>
-<text text-anchor="middle" x="580" y="-556.6" font-family="Times,serif" font-size="8.00" fill="#000000">or</text>
-<text text-anchor="middle" x="580" y="-547.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 30ms (27.27%)</text>
-</a>
-</g>
-</g>
-<!-- N7&#45;&gt;N1 -->
-<g id="edge18" class="edge">
-<title>N7&#45;&gt;N1</title>
-<g id="a_edge18"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or &#45;&gt; runtime.mapassign (10ms)">
-<path fill="none" stroke="#b28a61" d="M602.3763,-540.8771C615.1536,-527.0591 630.4773,-508.2777 640,-489 660.6615,-447.1731 672.376,-395.518 678.8058,-356.4769"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="682.3057,-356.7518 680.4056,-346.3288 675.391,-355.6617 682.3057,-356.7518"/>
-</a>
-</g>
-<g id="a_edge18&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or &#45;&gt; runtime.mapassign (10ms)">
-<text text-anchor="middle" x="692" y="-415.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N7&#45;&gt;N5 -->
-<g id="edge17" class="edge">
-<title>N7&#45;&gt;N5</title>
-<g id="a_edge17"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or &#45;&gt; runtime.mapaccess2 (10ms)">
-<path fill="none" stroke="#b28a61" d="M553.7075,-540.8647C529.2292,-518.4919 494.1636,-481.5154 478,-441 467.462,-414.5858 464.5412,-383.2447 464.5359,-356.6451"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="468.0398,-356.3726 464.6769,-346.3257 461.0405,-356.2769 468.0398,-356.3726"/>
-</a>
-</g>
-<g id="a_edge17&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or &#45;&gt; runtime.mapaccess2 (10ms)">
-<text text-anchor="middle" x="500" y="-415.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N8 -->
-<g id="node8" class="node">
-<title>N8</title>
-<g id="a_node8"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).createNode (20ms)">
-<polygon fill="#ede0d7" stroke="#b25110" points="630.5,-441 531.5,-441 531.5,-397 630.5,-397 630.5,-441"/>
-<text text-anchor="middle" x="581" y="-430.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
-<text text-anchor="middle" x="581" y="-421.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD)</text>
-<text text-anchor="middle" x="581" y="-412.6" font-family="Times,serif" font-size="8.00" fill="#000000">createNode</text>
-<text text-anchor="middle" x="581" y="-403.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 20ms (18.18%)</text>
-</a>
-</g>
-</g>
-<!-- N7&#45;&gt;N8 -->
-<g id="edge16" class="edge">
-<title>N7&#45;&gt;N8</title>
-<g id="a_edge16"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).createNode (10ms)">
-<path fill="none" stroke="#b28a61" d="M580.1541,-540.8156C580.3195,-516.9961 580.584,-478.9093 580.7732,-451.6646"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="584.2745,-451.471 580.8441,-441.4469 577.2747,-451.4223 584.2745,-451.471"/>
-</a>
-</g>
-<g id="a_edge16&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).createNode (10ms)">
-<text text-anchor="middle" x="608.5" y="-477.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-<text text-anchor="middle" x="608.5" y="-462.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N8&#45;&gt;N1 -->
-<g id="edge15" class="edge">
-<title>N8&#45;&gt;N1</title>
-<g id="a_edge15"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).createNode &#45;&gt; runtime.mapassign (10ms)">
-<path fill="none" stroke="#b28a61" d="M589.8227,-396.9469C594.6233,-386.3992 601.183,-373.9374 609,-364 611.769,-360.4799 614.748,-357.0076 617.8679,-353.6085"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="620.4914,-355.9298 624.8962,-346.294 615.4439,-351.0798 620.4914,-355.9298"/>
-</a>
-</g>
-<g id="a_edge15&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).createNode &#45;&gt; runtime.mapassign (10ms)">
-<text text-anchor="middle" x="631" y="-367.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N8&#45;&gt;N5 -->
-<g id="edge14" class="edge">
-<title>N8&#45;&gt;N5</title>
-<g id="a_edge14"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).createNode &#45;&gt; runtime.mapaccess2 (10ms)">
-<path fill="none" stroke="#b28a61" d="M560.4575,-396.8067C549.1692,-384.6114 534.6155,-368.8882 520.4524,-353.5869"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="522.9084,-351.0878 513.5469,-346.1266 517.7713,-355.8429 522.9084,-351.0878"/>
-</a>
-</g>
-<g id="a_edge14&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).createNode &#45;&gt; runtime.mapaccess2 (10ms)">
-<text text-anchor="middle" x="564" y="-367.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N9 -->
-<g id="node9" class="node">
-<title>N9</title>
-<g id="a_node9"><a xlink:title="runtime.markBits.isMarked (20ms)">
-<polygon fill="#ede0d7" stroke="#b25110" points="1194.5,-619 997.5,-619 997.5,-507 1194.5,-507 1194.5,-619"/>
-<text text-anchor="middle" x="1096" y="-595.8" font-family="Times,serif" font-size="24.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="1096" y="-569.8" font-family="Times,serif" font-size="24.00" fill="#000000">markBits</text>
-<text text-anchor="middle" x="1096" y="-543.8" font-family="Times,serif" font-size="24.00" fill="#000000">isMarked</text>
-<text text-anchor="middle" x="1096" y="-517.8" font-family="Times,serif" font-size="24.00" fill="#000000">20ms (18.18%)</text>
-</a>
-</g>
-</g>
-<!-- N10&#45;&gt;N7 -->
-<g id="edge7" class="edge">
-<title>N10&#45;&gt;N7</title>
-<g id="a_edge7"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or (30ms)">
-<path fill="none" stroke="#b23900" stroke-width="2" d="M580,-710.7755C580,-681.3768 580,-629.3416 580,-595.5195"/>
-<polygon fill="#b23900" stroke="#b23900" stroke-width="2" points="583.5001,-595.23 580,-585.23 576.5001,-595.23 583.5001,-595.23"/>
-</a>
-</g>
-<g id="a_edge7&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or (30ms)">
-<text text-anchor="middle" x="602" y="-648.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 30ms</text>
-</a>
-</g>
-</g>
-<!-- N11 -->
-<g id="node11" class="node">
-<title>N11</title>
-<g id="a_node11"><a xlink:title="aeshashbody (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="697,-63 537,-63 537,-11 697,-11 697,-63"/>
-<text text-anchor="middle" x="617" y="-43" font-family="Times,serif" font-size="20.00" fill="#000000">aeshashbody</text>
-<text text-anchor="middle" x="617" y="-21" font-family="Times,serif" font-size="20.00" fill="#000000">10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N15 -->
-<g id="node15" class="node">
-<title>N15</title>
-<g id="a_node15"><a xlink:title="runtime.memmove (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="875,-74 715,-74 715,0 875,0 875,-74"/>
-<text text-anchor="middle" x="795" y="-54" font-family="Times,serif" font-size="20.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="795" y="-32" font-family="Times,serif" font-size="20.00" fill="#000000">memmove</text>
-<text text-anchor="middle" x="795" y="-10" font-family="Times,serif" font-size="20.00" fill="#000000">10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N16 -->
-<g id="node16" class="node">
-<title>N16</title>
-<g id="a_node16"><a xlink:title="testing.tRunner (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="851,-921 757,-921 757,-885 851,-885 851,-921"/>
-<text text-anchor="middle" x="804" y="-910.1" font-family="Times,serif" font-size="8.00" fill="#000000">testing</text>
-<text text-anchor="middle" x="804" y="-901.1" font-family="Times,serif" font-size="8.00" fill="#000000">tRunner</text>
-<text text-anchor="middle" x="804" y="-892.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N23 -->
-<g id="node23" class="node">
-<title>N23</title>
-<g id="a_node23"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="850,-751 756,-751 756,-715 850,-715 850,-751"/>
-<text text-anchor="middle" x="803" y="-740.1" font-family="Times,serif" font-size="8.00" fill="#000000">ft</text>
-<text text-anchor="middle" x="803" y="-731.1" font-family="Times,serif" font-size="8.00" fill="#000000">TestBDDFTMCS0</text>
-<text text-anchor="middle" x="803" y="-722.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N16&#45;&gt;N23 -->
-<g id="edge32" class="edge">
-<title>N16&#45;&gt;N23</title>
-<g id="a_edge32"><a xlink:title="testing.tRunner &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 (10ms)">
-<path fill="none" stroke="#b28a61" d="M803.893,-884.807C803.7186,-855.1543 803.3718,-796.1984 803.1654,-761.1223"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="806.6651,-761.0414 803.1062,-751.0622 799.6652,-761.0826 806.6651,-761.0414"/>
-</a>
-</g>
-<g id="a_edge32&#45;label"><a xlink:title="testing.tRunner &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 (10ms)">
-<text text-anchor="middle" x="825" y="-810.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<g id="a_edge3&#45;label"><a xlink:title="testing.tRunner &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 (20ms)">
+<text text-anchor="middle" x="582" y="-1441.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 20ms</text>
 </a>
 </g>
 </g>
 <!-- N19 -->
 <g id="node19" class="node">
 <title>N19</title>
-<g id="a_node19"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).and (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="739,-925 645,-925 645,-881 739,-881 739,-925"/>
-<text text-anchor="middle" x="692" y="-914.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
-<text text-anchor="middle" x="692" y="-905.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD)</text>
-<text text-anchor="middle" x="692" y="-896.6" font-family="Times,serif" font-size="8.00" fill="#000000">and</text>
-<text text-anchor="middle" x="692" y="-887.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
+<g id="a_node19"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS1 (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="726.5,-1420 627.5,-1420 627.5,-1384 726.5,-1384 726.5,-1420"/>
+<text text-anchor="middle" x="677" y="-1409.1" font-family="Times,serif" font-size="8.00" fill="#000000">ft</text>
+<text text-anchor="middle" x="677" y="-1400.1" font-family="Times,serif" font-size="8.00" fill="#000000">TestBDDFTMCS1</text>
+<text text-anchor="middle" x="677" y="-1391.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
 </a>
 </g>
 </g>
-<!-- N17&#45;&gt;N19 -->
-<g id="edge11" class="edge">
-<title>N17&#45;&gt;N19</title>
-<g id="a_edge11"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).And &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).and (10ms)">
-<path fill="none" stroke="#b28a61" d="M692,-1024.8156C692,-1000.9961 692,-962.9093 692,-935.6646"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="695.5001,-935.4468 692,-925.4469 688.5001,-935.4469 695.5001,-935.4468"/>
+<!-- N1&#45;&gt;N19 -->
+<g id="edge29" class="edge">
+<title>N1&#45;&gt;N19</title>
+<g id="a_edge29"><a xlink:title="testing.tRunner &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS1 (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M575.5367,-1520.3739C595.8166,-1496.7139 631.449,-1455.1429 654.6341,-1428.0936"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="657.5485,-1430.0715 661.399,-1420.2011 652.2337,-1425.5159 657.5485,-1430.0715"/>
 </a>
 </g>
-<g id="a_edge11&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).And &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).and (10ms)">
-<text text-anchor="middle" x="714" y="-980.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N18 -->
-<g id="node18" class="node">
-<title>N18</title>
-<g id="a_node18"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Imp (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="627,-925 533,-925 533,-881 627,-881 627,-925"/>
-<text text-anchor="middle" x="580" y="-914.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
-<text text-anchor="middle" x="580" y="-905.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD)</text>
-<text text-anchor="middle" x="580" y="-896.6" font-family="Times,serif" font-size="8.00" fill="#000000">Imp</text>
-<text text-anchor="middle" x="580" y="-887.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
+<g id="a_edge29&#45;label"><a xlink:title="testing.tRunner &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS1 (10ms)">
+<text text-anchor="middle" x="668" y="-1441.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
 </a>
 </g>
 </g>
-<!-- N18&#45;&gt;N10 -->
-<g id="edge12" class="edge">
-<title>N18&#45;&gt;N10</title>
-<g id="a_edge12"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Imp &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or (10ms)">
-<path fill="none" stroke="#b28a61" d="M580,-880.7755C580,-851.3768 580,-799.3416 580,-765.5195"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="583.5001,-765.23 580,-755.23 576.5001,-765.23 583.5001,-765.23"/>
-</a>
-</g>
-<g id="a_edge12&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Imp &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or (10ms)">
-<text text-anchor="middle" x="602" y="-810.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N19&#45;&gt;N8 -->
-<g id="edge13" class="edge">
-<title>N19&#45;&gt;N8</title>
-<g id="a_edge13"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).and &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).createNode (10ms)">
-<path fill="none" stroke="#b28a61" d="M695.4889,-880.623C705.0207,-811.8324 725.4096,-599.629 640,-459 637.586,-455.0253 634.6094,-451.3556 631.2874,-447.9869"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="633.3425,-445.1304 623.5475,-441.0919 628.6863,-450.3572 633.3425,-445.1304"/>
-</a>
-</g>
-<g id="a_edge13&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).and &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).createNode (10ms)">
-<text text-anchor="middle" x="728.5" y="-655.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-<text text-anchor="middle" x="728.5" y="-640.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N20 -->
-<g id="node20" class="node">
-<title>N20</title>
-<g id="a_node20"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="846,-585 752,-585 752,-541 846,-541 846,-585"/>
-<text text-anchor="middle" x="799" y="-574.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
-<text text-anchor="middle" x="799" y="-565.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD0)</text>
-<text text-anchor="middle" x="799" y="-556.6" font-family="Times,serif" font-size="8.00" fill="#000000">Or</text>
-<text text-anchor="middle" x="799" y="-547.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N21 -->
-<g id="node21" class="node">
-<title>N21</title>
-<g id="a_node21"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or (10ms)">
-<polygon fill="#ede7e2" stroke="#b28a61" points="837,-441 743,-441 743,-397 837,-397 837,-441"/>
-<text text-anchor="middle" x="790" y="-430.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
-<text text-anchor="middle" x="790" y="-421.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD0)</text>
-<text text-anchor="middle" x="790" y="-412.6" font-family="Times,serif" font-size="8.00" fill="#000000">or</text>
-<text text-anchor="middle" x="790" y="-403.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (9.09%)</text>
-</a>
-</g>
-</g>
-<!-- N20&#45;&gt;N21 -->
-<g id="edge19" class="edge">
-<title>N20&#45;&gt;N21</title>
-<g id="a_edge19"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or (10ms)">
-<path fill="none" stroke="#b28a61" d="M797.6135,-540.8156C796.1248,-516.9961 793.7443,-478.9093 792.0415,-451.6646"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="795.52,-451.209 791.4029,-441.4469 788.5336,-451.6458 795.52,-451.209"/>
-</a>
-</g>
-<g id="a_edge19&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or (10ms)">
-<text text-anchor="middle" x="816" y="-470.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N21&#45;&gt;N1 -->
-<g id="edge20" class="edge">
-<title>N21&#45;&gt;N1</title>
-<g id="a_edge20"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or &#45;&gt; runtime.mapassign (10ms)">
-<path fill="none" stroke="#b28a61" d="M770.9248,-396.8067C760.5381,-384.7222 747.1741,-369.1738 734.136,-354.0043"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="736.5376,-351.4289 727.365,-346.1266 731.229,-355.9917 736.5376,-351.4289"/>
-</a>
-</g>
-<g id="a_edge20&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or &#45;&gt; runtime.mapassign (10ms)">
-<text text-anchor="middle" x="775" y="-367.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N22&#45;&gt;N18 -->
-<g id="edge24" class="edge">
-<title>N22&#45;&gt;N18</title>
-<g id="a_edge24"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Imp (10ms)">
-<path fill="none" stroke="#b28a61" d="M580,-1028.7623C580,-1005.3061 580,-964.1632 580,-935.3423"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="583.5001,-935.337 580,-925.3371 576.5001,-935.3371 583.5001,-935.337"/>
-</a>
-</g>
-<g id="a_edge24&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Imp (10ms)">
-<text text-anchor="middle" x="602" y="-980.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
-</a>
-</g>
-</g>
-<!-- N23&#45;&gt;N20 -->
-<g id="edge25" class="edge">
-<title>N23&#45;&gt;N20</title>
-<g id="a_edge25"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or (10ms)">
-<path fill="none" stroke="#b28a61" d="M802.5719,-714.807C801.9016,-686.3187 800.5949,-630.7833 799.7614,-595.3616"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="803.2536,-594.9814 799.5192,-585.0666 796.2555,-595.1462 803.2536,-594.9814"/>
-</a>
-</g>
-<g id="a_edge25&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or (10ms)">
-<text text-anchor="middle" x="823" y="-648.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<!-- N2 -->
+<g id="node2" class="node">
+<title>N2</title>
+<g id="a_node2"><a xlink:title="runtime.evacuate (20ms)">
+<polygon fill="#edd9d5" stroke="#b22100" points="749.5,-802 522.5,-802 522.5,-690 749.5,-690 749.5,-802"/>
+<text text-anchor="middle" x="636" y="-778.8" font-family="Times,serif" font-size="24.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="636" y="-752.8" font-family="Times,serif" font-size="24.00" fill="#000000">evacuate</text>
+<text text-anchor="middle" x="636" y="-726.8" font-family="Times,serif" font-size="24.00" fill="#000000">10ms (25.00%)</text>
+<text text-anchor="middle" x="636" y="-700.8" font-family="Times,serif" font-size="24.00" fill="#000000">of 20ms (50.00%)</text>
 </a>
 </g>
 </g>
 <!-- N24 -->
 <g id="node24" class="node">
 <title>N24</title>
-<g id="a_node24"><a xlink:title="runtime.gcBgMarkWorker.func2 (50ms)">
-<polygon fill="#eddad5" stroke="#b22500" points="1145.5,-1179 1046.5,-1179 1046.5,-1135 1145.5,-1135 1145.5,-1179"/>
-<text text-anchor="middle" x="1096" y="-1168.6" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="1096" y="-1159.6" font-family="Times,serif" font-size="8.00" fill="#000000">gcBgMarkWorker</text>
-<text text-anchor="middle" x="1096" y="-1150.6" font-family="Times,serif" font-size="8.00" fill="#000000">func2</text>
-<text text-anchor="middle" x="1096" y="-1141.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 50ms (45.45%)</text>
+<g id="a_node24"><a xlink:title="runtime.(*bmap).overflow (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="685.5,-624 586.5,-624 586.5,-580 685.5,-580 685.5,-624"/>
+<text text-anchor="middle" x="636" y="-613.6" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="636" y="-604.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*bmap)</text>
+<text text-anchor="middle" x="636" y="-595.6" font-family="Times,serif" font-size="8.00" fill="#000000">overflow</text>
+<text text-anchor="middle" x="636" y="-586.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N2&#45;&gt;N24 -->
+<g id="edge22" class="edge">
+<title>N2&#45;&gt;N24</title>
+<g id="a_edge22"><a xlink:title="runtime.evacuate &#45;&gt; runtime.(*bmap).overflow (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M636,-689.9135C636,-671.1272 636,-650.8194 636,-634.4596"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="639.5001,-634.3346 636,-624.3346 632.5001,-634.3346 639.5001,-634.3346"/>
+</a>
+</g>
+<g id="a_edge22&#45;label"><a xlink:title="runtime.evacuate &#45;&gt; runtime.(*bmap).overflow (10ms)">
+<text text-anchor="middle" x="663.5" y="-660.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<text text-anchor="middle" x="663.5" y="-645.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N13 -->
+<g id="node13" class="node">
+<title>N13</title>
+<g id="a_node13"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="609.5,-1333 510.5,-1333 510.5,-1289 609.5,-1289 609.5,-1333"/>
+<text text-anchor="middle" x="560" y="-1322.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
+<text text-anchor="middle" x="560" y="-1313.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD0)</text>
+<text text-anchor="middle" x="560" y="-1304.6" font-family="Times,serif" font-size="8.00" fill="#000000">Or</text>
+<text text-anchor="middle" x="560" y="-1295.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N3&#45;&gt;N13 -->
+<g id="edge14" class="edge">
+<title>N3&#45;&gt;N13</title>
+<g id="a_edge14"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M560,-1383.5848C560,-1372.1105 560,-1357.0231 560,-1343.5774"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="563.5001,-1343.2465 560,-1333.2465 556.5001,-1343.2466 563.5001,-1343.2465"/>
+</a>
+</g>
+<g id="a_edge14&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or (10ms)">
+<text text-anchor="middle" x="582" y="-1354.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N18 -->
+<g id="node18" class="node">
+<title>N18</title>
+<g id="a_node18"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs0 (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-1329 393.5,-1329 393.5,-1293 492.5,-1293 492.5,-1329"/>
+<text text-anchor="middle" x="443" y="-1318.1" font-family="Times,serif" font-size="8.00" fill="#000000">ft</text>
+<text text-anchor="middle" x="443" y="-1309.1" font-family="Times,serif" font-size="8.00" fill="#000000">Ftmcs0</text>
+<text text-anchor="middle" x="443" y="-1300.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N3&#45;&gt;N18 -->
+<g id="edge15" class="edge">
+<title>N3&#45;&gt;N18</title>
+<g id="a_edge15"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs0 (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M535.4758,-1383.8242C527.9125,-1378.1605 519.5811,-1371.8623 512,-1366 499.1998,-1356.1018 485.2159,-1345.0085 473.2042,-1335.3914"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="475.232,-1332.5311 465.2422,-1329.002 470.8509,-1337.9906 475.232,-1332.5311"/>
+</a>
+</g>
+<g id="a_edge15&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS0 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs0 (10ms)">
+<text text-anchor="middle" x="534" y="-1354.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N4 -->
+<g id="node4" class="node">
+<title>N4</title>
+<g id="a_node4"><a xlink:title="runtime.add (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="734.5,-514 537.5,-514 537.5,-428 734.5,-428 734.5,-514"/>
+<text text-anchor="middle" x="636" y="-490.8" font-family="Times,serif" font-size="24.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="636" y="-464.8" font-family="Times,serif" font-size="24.00" fill="#000000">add</text>
+<text text-anchor="middle" x="636" y="-438.8" font-family="Times,serif" font-size="24.00" fill="#000000">10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N5 -->
+<g id="node5" class="node">
+<title>N5</title>
+<g id="a_node5"><a xlink:title="runtime.mapassign (20ms)">
+<polygon fill="#edd9d5" stroke="#b22100" points="685.5,-976 586.5,-976 586.5,-940 685.5,-940 685.5,-976"/>
+<text text-anchor="middle" x="636" y="-965.1" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="636" y="-956.1" font-family="Times,serif" font-size="8.00" fill="#000000">mapassign</text>
+<text text-anchor="middle" x="636" y="-947.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 20ms (50.00%)</text>
+</a>
+</g>
+</g>
+<!-- N27 -->
+<g id="node27" class="node">
+<title>N27</title>
+<g id="a_node27"><a xlink:title="runtime.growWork (20ms)">
+<polygon fill="#edd9d5" stroke="#b22100" points="685.5,-889 586.5,-889 586.5,-853 685.5,-853 685.5,-889"/>
+<text text-anchor="middle" x="636" y="-878.1" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="636" y="-869.1" font-family="Times,serif" font-size="8.00" fill="#000000">growWork</text>
+<text text-anchor="middle" x="636" y="-860.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 20ms (50.00%)</text>
+</a>
+</g>
+</g>
+<!-- N5&#45;&gt;N27 -->
+<g id="edge2" class="edge">
+<title>N5&#45;&gt;N27</title>
+<g id="a_edge2"><a xlink:title="runtime.mapassign &#45;&gt; runtime.growWork (20ms)">
+<path fill="none" stroke="#b22100" stroke-width="3" d="M636,-939.9735C636,-928.1918 636,-912.5607 636,-899.1581"/>
+<polygon fill="#b22100" stroke="#b22100" stroke-width="3" points="639.5001,-899.0033 636,-889.0034 632.5001,-899.0034 639.5001,-899.0033"/>
+</a>
+</g>
+<g id="a_edge2&#45;label"><a xlink:title="runtime.mapassign &#45;&gt; runtime.growWork (20ms)">
+<text text-anchor="middle" x="658" y="-910.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 20ms</text>
+</a>
+</g>
+</g>
+<!-- N6 -->
+<g id="node6" class="node">
+<title>N6</title>
+<g id="a_node6"><a xlink:title="runtime.scanobject (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="939.5,-1128 742.5,-1128 742.5,-1042 939.5,-1042 939.5,-1128"/>
+<text text-anchor="middle" x="841" y="-1104.8" font-family="Times,serif" font-size="24.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="841" y="-1078.8" font-family="Times,serif" font-size="24.00" fill="#000000">scanobject</text>
+<text text-anchor="middle" x="841" y="-1052.8" font-family="Times,serif" font-size="24.00" fill="#000000">10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N7 -->
+<g id="node7" class="node">
+<title>N7</title>
+<g id="a_node7"><a xlink:title="syscall.Syscall (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="541.5,-86 344.5,-86 344.5,0 541.5,0 541.5,-86"/>
+<text text-anchor="middle" x="443" y="-62.8" font-family="Times,serif" font-size="24.00" fill="#000000">syscall</text>
+<text text-anchor="middle" x="443" y="-36.8" font-family="Times,serif" font-size="24.00" fill="#000000">Syscall</text>
+<text text-anchor="middle" x="443" y="-10.8" font-family="Times,serif" font-size="24.00" fill="#000000">10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N8 -->
+<g id="node8" class="node">
+<title>N8</title>
+<g id="a_node8"><a xlink:title="runtime.gcBgMarkWorker (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="890.5,-1556.5 791.5,-1556.5 791.5,-1520.5 890.5,-1520.5 890.5,-1556.5"/>
+<text text-anchor="middle" x="841" y="-1545.6" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="841" y="-1536.6" font-family="Times,serif" font-size="8.00" fill="#000000">gcBgMarkWorker</text>
+<text text-anchor="middle" x="841" y="-1527.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N28 -->
+<g id="node28" class="node">
+<title>N28</title>
+<g id="a_node28"><a xlink:title="runtime.systemstack (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="890.5,-1420 791.5,-1420 791.5,-1384 890.5,-1384 890.5,-1420"/>
+<text text-anchor="middle" x="841" y="-1409.1" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="841" y="-1400.1" font-family="Times,serif" font-size="8.00" fill="#000000">systemstack</text>
+<text text-anchor="middle" x="841" y="-1391.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N8&#45;&gt;N28 -->
+<g id="edge23" class="edge">
+<title>N8&#45;&gt;N28</title>
+<g id="a_edge23"><a xlink:title="runtime.gcBgMarkWorker &#45;&gt; runtime.systemstack (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M841,-1520.3739C841,-1497.3258 841,-1457.2811 841,-1430.2208"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="844.5001,-1430.2011 841,-1420.2011 837.5001,-1430.2011 844.5001,-1430.2011"/>
+</a>
+</g>
+<g id="a_edge23&#45;label"><a xlink:title="runtime.gcBgMarkWorker &#45;&gt; runtime.systemstack (10ms)">
+<text text-anchor="middle" x="863" y="-1441.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N9 -->
+<g id="node9" class="node">
+<title>N9</title>
+<g id="a_node9"><a xlink:title="fmt.Fprintf (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-889 393.5,-889 393.5,-853 492.5,-853 492.5,-889"/>
+<text text-anchor="middle" x="443" y="-878.1" font-family="Times,serif" font-size="8.00" fill="#000000">fmt</text>
+<text text-anchor="middle" x="443" y="-869.1" font-family="Times,serif" font-size="8.00" fill="#000000">Fprintf</text>
+<text text-anchor="middle" x="443" y="-860.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N22 -->
+<g id="node22" class="node">
+<title>N22</title>
+<g id="a_node22"><a xlink:title="os.(*File).Write (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-768 393.5,-768 393.5,-724 492.5,-724 492.5,-768"/>
+<text text-anchor="middle" x="443" y="-757.6" font-family="Times,serif" font-size="8.00" fill="#000000">os</text>
+<text text-anchor="middle" x="443" y="-748.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*File)</text>
+<text text-anchor="middle" x="443" y="-739.6" font-family="Times,serif" font-size="8.00" fill="#000000">Write</text>
+<text text-anchor="middle" x="443" y="-730.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N9&#45;&gt;N22 -->
+<g id="edge4" class="edge">
+<title>N9&#45;&gt;N22</title>
+<g id="a_edge4"><a xlink:title="fmt.Fprintf &#45;&gt; os.(*File).Write (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-852.8239C443,-833.4467 443,-802.3585 443,-778.704"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-778.4275 443,-768.4275 439.5001,-778.4276 446.5001,-778.4275"/>
+</a>
+</g>
+<g id="a_edge4&#45;label"><a xlink:title="fmt.Fprintf &#45;&gt; os.(*File).Write (10ms)">
+<text text-anchor="middle" x="465" y="-823.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N10 -->
+<g id="node10" class="node">
+<title>N10</title>
+<g id="a_node10"><a xlink:title="fmt.Printf (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-976 393.5,-976 393.5,-940 492.5,-940 492.5,-976"/>
+<text text-anchor="middle" x="443" y="-965.1" font-family="Times,serif" font-size="8.00" fill="#000000">fmt</text>
+<text text-anchor="middle" x="443" y="-956.1" font-family="Times,serif" font-size="8.00" fill="#000000">Printf</text>
+<text text-anchor="middle" x="443" y="-947.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N10&#45;&gt;N9 -->
+<g id="edge5" class="edge">
+<title>N10&#45;&gt;N9</title>
+<g id="a_edge5"><a xlink:title="fmt.Printf &#45;&gt; fmt.Fprintf (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-939.9735C443,-928.1918 443,-912.5607 443,-899.1581"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-899.0033 443,-889.0034 439.5001,-899.0034 446.5001,-899.0033"/>
+</a>
+</g>
+<g id="a_edge5&#45;label"><a xlink:title="fmt.Printf &#45;&gt; fmt.Fprintf (10ms)">
+<text text-anchor="middle" x="465" y="-910.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N11 -->
+<g id="node11" class="node">
+<title>N11</title>
+<g id="a_node11"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="726.5,-1333 627.5,-1333 627.5,-1289 726.5,-1289 726.5,-1333"/>
+<text text-anchor="middle" x="677" y="-1322.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
+<text text-anchor="middle" x="677" y="-1313.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD)</text>
+<text text-anchor="middle" x="677" y="-1304.6" font-family="Times,serif" font-size="8.00" fill="#000000">Or</text>
+<text text-anchor="middle" x="677" y="-1295.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N12 -->
+<g id="node12" class="node">
+<title>N12</title>
+<g id="a_node12"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="726.5,-1238 627.5,-1238 627.5,-1194 726.5,-1194 726.5,-1238"/>
+<text text-anchor="middle" x="677" y="-1227.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
+<text text-anchor="middle" x="677" y="-1218.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD)</text>
+<text text-anchor="middle" x="677" y="-1209.6" font-family="Times,serif" font-size="8.00" fill="#000000">or</text>
+<text text-anchor="middle" x="677" y="-1200.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N11&#45;&gt;N12 -->
+<g id="edge6" class="edge">
+<title>N11&#45;&gt;N12</title>
+<g id="a_edge6"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M677,-1288.9663C677,-1276.9427 677,-1261.8283 677,-1248.4785"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="680.5001,-1248.2433 677,-1238.2433 673.5001,-1248.2433 680.5001,-1248.2433"/>
+</a>
+</g>
+<g id="a_edge6&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or (10ms)">
+<text text-anchor="middle" x="699" y="-1259.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N17 -->
+<g id="node17" class="node">
+<title>N17</title>
+<g id="a_node17"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*OpeCache2).set (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="724.5,-1107 625.5,-1107 625.5,-1063 724.5,-1063 724.5,-1107"/>
+<text text-anchor="middle" x="675" y="-1096.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
+<text text-anchor="middle" x="675" y="-1087.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*OpeCache2)</text>
+<text text-anchor="middle" x="675" y="-1078.6" font-family="Times,serif" font-size="8.00" fill="#000000">set</text>
+<text text-anchor="middle" x="675" y="-1069.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N12&#45;&gt;N17 -->
+<g id="edge7" class="edge">
+<title>N12&#45;&gt;N17</title>
+<g id="a_edge7"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*OpeCache2).set (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M676.6607,-1193.7776C676.3418,-1172.8877 675.8606,-1141.3674 675.4981,-1117.6261"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="678.9933,-1117.2768 675.3409,-1107.3314 671.9941,-1117.3837 678.9933,-1117.2768"/>
+</a>
+</g>
+<g id="a_edge7&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*OpeCache2).set (10ms)">
+<text text-anchor="middle" x="703.5" y="-1164.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<text text-anchor="middle" x="703.5" y="-1149.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N15 -->
+<g id="node15" class="node">
+<title>N15</title>
+<g id="a_node15"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="609.5,-1238 510.5,-1238 510.5,-1194 609.5,-1194 609.5,-1238"/>
+<text text-anchor="middle" x="560" y="-1227.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
+<text text-anchor="middle" x="560" y="-1218.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD0)</text>
+<text text-anchor="middle" x="560" y="-1209.6" font-family="Times,serif" font-size="8.00" fill="#000000">or</text>
+<text text-anchor="middle" x="560" y="-1200.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N13&#45;&gt;N15 -->
+<g id="edge8" class="edge">
+<title>N13&#45;&gt;N15</title>
+<g id="a_edge8"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M560,-1288.9663C560,-1276.9427 560,-1261.8283 560,-1248.4785"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="563.5001,-1248.2433 560,-1238.2433 556.5001,-1248.2433 563.5001,-1248.2433"/>
+</a>
+</g>
+<g id="a_edge8&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).Or &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or (10ms)">
+<text text-anchor="middle" x="582" y="-1259.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N14 -->
+<g id="node14" class="node">
+<title>N14</title>
+<g id="a_node14"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).ToDot (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-1238 393.5,-1238 393.5,-1194 492.5,-1194 492.5,-1238"/>
+<text text-anchor="middle" x="443" y="-1227.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
+<text text-anchor="middle" x="443" y="-1218.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD0)</text>
+<text text-anchor="middle" x="443" y="-1209.6" font-family="Times,serif" font-size="8.00" fill="#000000">ToDot</text>
+<text text-anchor="middle" x="443" y="-1200.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N16 -->
+<g id="node16" class="node">
+<title>N16</title>
+<g id="a_node16"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).todot (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-1107 393.5,-1107 393.5,-1063 492.5,-1063 492.5,-1107"/>
+<text text-anchor="middle" x="443" y="-1096.6" font-family="Times,serif" font-size="8.00" fill="#000000">bdd</text>
+<text text-anchor="middle" x="443" y="-1087.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*BDD0)</text>
+<text text-anchor="middle" x="443" y="-1078.6" font-family="Times,serif" font-size="8.00" fill="#000000">todot</text>
+<text text-anchor="middle" x="443" y="-1069.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N14&#45;&gt;N16 -->
+<g id="edge9" class="edge">
+<title>N14&#45;&gt;N16</title>
+<g id="a_edge9"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).ToDot &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).todot (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-1193.7776C443,-1172.8877 443,-1141.3674 443,-1117.6261"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-1117.3313 443,-1107.3314 439.5001,-1117.3314 446.5001,-1117.3313"/>
+</a>
+</g>
+<g id="a_edge9&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).ToDot &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).todot (10ms)">
+<text text-anchor="middle" x="465" y="-1157.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N15&#45;&gt;N5 -->
+<g id="edge10" class="edge">
+<title>N15&#45;&gt;N5</title>
+<g id="a_edge10"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or &#45;&gt; runtime.mapassign (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M557.5858,-1193.9967C554.7241,-1160.1273 552.5346,-1093.7194 572,-1042 580.2491,-1020.0823 596.1998,-999.1239 610.1129,-983.6242"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="612.9141,-985.7509 617.1512,-976.0402 607.7832,-980.9892 612.9141,-985.7509"/>
+</a>
+</g>
+<g id="a_edge10&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).or &#45;&gt; runtime.mapassign (10ms)">
+<text text-anchor="middle" x="594" y="-1081.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N16&#45;&gt;N10 -->
+<g id="edge11" class="edge">
+<title>N16&#45;&gt;N10</title>
+<g id="a_edge11"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).todot &#45;&gt; fmt.Printf (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-1062.8783C443,-1041.6509 443,-1009.4966 443,-986.3892"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-986.1707 443,-976.1707 439.5001,-986.1707 446.5001,-986.1707"/>
+</a>
+</g>
+<g id="a_edge11&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).todot &#45;&gt; fmt.Printf (10ms)">
+<text text-anchor="middle" x="470.5" y="-1012.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<text text-anchor="middle" x="470.5" y="-997.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N17&#45;&gt;N5 -->
+<g id="edge12" class="edge">
+<title>N17&#45;&gt;N5</title>
+<g id="a_edge12"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*OpeCache2).set &#45;&gt; runtime.mapassign (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M668.2067,-1062.8783C661.6291,-1041.4588 651.6349,-1008.9137 644.526,-985.7641"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="647.8614,-984.7026 641.58,-976.1707 641.1698,-986.7576 647.8614,-984.7026"/>
+</a>
+</g>
+<g id="a_edge12&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/bdd.(*OpeCache2).set &#45;&gt; runtime.mapassign (10ms)">
+<text text-anchor="middle" x="678" y="-1005.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N18&#45;&gt;N14 -->
+<g id="edge13" class="edge">
+<title>N18&#45;&gt;N14</title>
+<g id="a_edge13"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs0 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).ToDot (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-1292.683C443,-1280.1876 443,-1263.2931 443,-1248.542"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-1248.2732 443,-1238.2733 439.5001,-1248.2733 446.5001,-1248.2732"/>
+</a>
+</g>
+<g id="a_edge13&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.Ftmcs0 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD0).ToDot (10ms)">
+<text text-anchor="middle" x="465" y="-1259.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N19&#45;&gt;N11 -->
+<g id="edge16" class="edge">
+<title>N19&#45;&gt;N11</title>
+<g id="a_edge16"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M677,-1383.5848C677,-1372.1105 677,-1357.0231 677,-1343.5774"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="680.5001,-1343.2465 677,-1333.2465 673.5001,-1343.2466 680.5001,-1343.2465"/>
+</a>
+</g>
+<g id="a_edge16&#45;label"><a xlink:title="github.com/okamumu/go&#45;mdd/pkg/ft.TestBDDFTMCS1 &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/bdd.(*BDD).Or (10ms)">
+<text text-anchor="middle" x="699" y="-1354.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N20 -->
+<g id="node20" class="node">
+<title>N20</title>
+<g id="a_node20"><a xlink:title="internal/poll.(*FD).Write (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-493 393.5,-493 393.5,-449 492.5,-449 492.5,-493"/>
+<text text-anchor="middle" x="443" y="-482.6" font-family="Times,serif" font-size="8.00" fill="#000000">poll</text>
+<text text-anchor="middle" x="443" y="-473.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*FD)</text>
+<text text-anchor="middle" x="443" y="-464.6" font-family="Times,serif" font-size="8.00" fill="#000000">Write</text>
+<text text-anchor="middle" x="443" y="-455.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N21 -->
+<g id="node21" class="node">
+<title>N21</title>
+<g id="a_node21"><a xlink:title="internal/poll.ignoringEINTRIO (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-362 393.5,-362 393.5,-326 492.5,-326 492.5,-362"/>
+<text text-anchor="middle" x="443" y="-351.1" font-family="Times,serif" font-size="8.00" fill="#000000">poll</text>
+<text text-anchor="middle" x="443" y="-342.1" font-family="Times,serif" font-size="8.00" fill="#000000">ignoringEINTRIO</text>
+<text text-anchor="middle" x="443" y="-333.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N20&#45;&gt;N21 -->
+<g id="edge17" class="edge">
+<title>N20&#45;&gt;N21</title>
+<g id="a_edge17"><a xlink:title="internal/poll.(*FD).Write &#45;&gt; internal/poll.ignoringEINTRIO (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-448.8783C443,-427.6509 443,-395.4966 443,-372.3892"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-372.1707 443,-362.1707 439.5001,-372.1707 446.5001,-372.1707"/>
+</a>
+</g>
+<g id="a_edge17&#45;label"><a xlink:title="internal/poll.(*FD).Write &#45;&gt; internal/poll.ignoringEINTRIO (10ms)">
+<text text-anchor="middle" x="470.5" y="-398.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<text text-anchor="middle" x="470.5" y="-383.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N29 -->
+<g id="node29" class="node">
+<title>N29</title>
+<g id="a_node29"><a xlink:title="syscall.Write (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-260 393.5,-260 393.5,-224 492.5,-224 492.5,-260"/>
+<text text-anchor="middle" x="443" y="-249.1" font-family="Times,serif" font-size="8.00" fill="#000000">syscall</text>
+<text text-anchor="middle" x="443" y="-240.1" font-family="Times,serif" font-size="8.00" fill="#000000">Write</text>
+<text text-anchor="middle" x="443" y="-231.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N21&#45;&gt;N29 -->
+<g id="edge18" class="edge">
+<title>N21&#45;&gt;N29</title>
+<g id="a_edge18"><a xlink:title="internal/poll.ignoringEINTRIO &#45;&gt; syscall.Write (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-325.7644C443,-310.317 443,-287.9149 443,-270.164"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-270.0776 443,-260.0777 439.5001,-270.0777 446.5001,-270.0776"/>
+</a>
+</g>
+<g id="a_edge18&#45;label"><a xlink:title="internal/poll.ignoringEINTRIO &#45;&gt; syscall.Write (10ms)">
+<text text-anchor="middle" x="470.5" y="-296.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<text text-anchor="middle" x="470.5" y="-281.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N23 -->
+<g id="node23" class="node">
+<title>N23</title>
+<g id="a_node23"><a xlink:title="os.(*File).write (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-624 393.5,-624 393.5,-580 492.5,-580 492.5,-624"/>
+<text text-anchor="middle" x="443" y="-613.6" font-family="Times,serif" font-size="8.00" fill="#000000">os</text>
+<text text-anchor="middle" x="443" y="-604.6" font-family="Times,serif" font-size="8.00" fill="#000000">(*File)</text>
+<text text-anchor="middle" x="443" y="-595.6" font-family="Times,serif" font-size="8.00" fill="#000000">write</text>
+<text text-anchor="middle" x="443" y="-586.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N22&#45;&gt;N23 -->
+<g id="edge19" class="edge">
+<title>N22&#45;&gt;N23</title>
+<g id="a_edge19"><a xlink:title="os.(*File).Write &#45;&gt; os.(*File).write (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-723.8156C443,-699.9961 443,-661.9093 443,-634.6646"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-634.4468 443,-624.4469 439.5001,-634.4469 446.5001,-634.4468"/>
+</a>
+</g>
+<g id="a_edge19&#45;label"><a xlink:title="os.(*File).Write &#45;&gt; os.(*File).write (10ms)">
+<text text-anchor="middle" x="470.5" y="-660.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<text text-anchor="middle" x="470.5" y="-645.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
+</a>
+</g>
+</g>
+<!-- N23&#45;&gt;N20 -->
+<g id="edge20" class="edge">
+<title>N23&#45;&gt;N20</title>
+<g id="a_edge20"><a xlink:title="os.(*File).write &#45;&gt; internal/poll.(*FD).Write (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-579.7776C443,-558.8877 443,-527.3674 443,-503.6261"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-503.3313 443,-493.3314 439.5001,-503.3314 446.5001,-503.3313"/>
+</a>
+</g>
+<g id="a_edge20&#45;label"><a xlink:title="os.(*File).write &#45;&gt; internal/poll.(*FD).Write (10ms)">
+<text text-anchor="middle" x="465" y="-543.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N24&#45;&gt;N4 -->
+<g id="edge21" class="edge">
+<title>N24&#45;&gt;N4</title>
+<g id="a_edge21"><a xlink:title="runtime.(*bmap).overflow &#45;&gt; runtime.add (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M636,-579.7776C636,-564.4857 636,-543.4975 636,-524.0341"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="639.5001,-524.0332 636,-514.0332 632.5001,-524.0332 639.5001,-524.0332"/>
+</a>
+</g>
+<g id="a_edge21&#45;label"><a xlink:title="runtime.(*bmap).overflow &#45;&gt; runtime.add (10ms)">
+<text text-anchor="middle" x="663.5" y="-550.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<text text-anchor="middle" x="663.5" y="-535.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
 </a>
 </g>
 </g>
 <!-- N25 -->
 <g id="node25" class="node">
 <title>N25</title>
-<g id="a_node25"><a xlink:title="runtime.gcDrain (50ms)">
-<polygon fill="#eddad5" stroke="#b22500" points="1145.5,-1065 1046.5,-1065 1046.5,-1029 1145.5,-1029 1145.5,-1065"/>
-<text text-anchor="middle" x="1096" y="-1054.1" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
-<text text-anchor="middle" x="1096" y="-1045.1" font-family="Times,serif" font-size="8.00" fill="#000000">gcDrain</text>
-<text text-anchor="middle" x="1096" y="-1036.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 50ms (45.45%)</text>
+<g id="a_node25"><a xlink:title="runtime.gcBgMarkWorker.func2 (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="890.5,-1333 791.5,-1333 791.5,-1289 890.5,-1289 890.5,-1333"/>
+<text text-anchor="middle" x="841" y="-1322.6" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="841" y="-1313.6" font-family="Times,serif" font-size="8.00" fill="#000000">gcBgMarkWorker</text>
+<text text-anchor="middle" x="841" y="-1304.6" font-family="Times,serif" font-size="8.00" fill="#000000">func2</text>
+<text text-anchor="middle" x="841" y="-1295.6" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
 </a>
 </g>
 </g>
-<!-- N24&#45;&gt;N25 -->
-<g id="edge2" class="edge">
-<title>N24&#45;&gt;N25</title>
-<g id="a_edge2"><a xlink:title="runtime.gcBgMarkWorker.func2 &#45;&gt; runtime.gcDrain (50ms)">
-<path fill="none" stroke="#b22500" stroke-width="3" d="M1096,-1134.7399C1096,-1117.6319 1096,-1093.8791 1096,-1075.4016"/>
-<polygon fill="#b22500" stroke="#b22500" stroke-width="3" points="1099.5001,-1075.2221 1096,-1065.2221 1092.5001,-1075.2221 1099.5001,-1075.2221"/>
-</a>
-</g>
-<g id="a_edge2&#45;label"><a xlink:title="runtime.gcBgMarkWorker.func2 &#45;&gt; runtime.gcDrain (50ms)">
-<text text-anchor="middle" x="1118" y="-1105.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 50ms</text>
-</a>
-</g>
-</g>
-<!-- N25&#45;&gt;N3 -->
-<g id="edge3" class="edge">
-<title>N25&#45;&gt;N3</title>
-<g id="a_edge3"><a xlink:title="runtime.gcDrain &#45;&gt; runtime.scanobject (50ms)">
-<path fill="none" stroke="#b22500" stroke-width="3" d="M1096,-1028.7623C1096,-1013.6703 1096,-991.2563 1096,-969.5135"/>
-<polygon fill="#b22500" stroke="#b22500" stroke-width="3" points="1099.5001,-969.2654 1096,-959.2654 1092.5001,-969.2655 1099.5001,-969.2654"/>
-</a>
-</g>
-<g id="a_edge3&#45;label"><a xlink:title="runtime.gcDrain &#45;&gt; runtime.scanobject (50ms)">
-<text text-anchor="middle" x="1118" y="-980.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 50ms</text>
+<!-- N26 -->
+<g id="node26" class="node">
+<title>N26</title>
+<g id="a_node26"><a xlink:title="runtime.gcDrain (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="890.5,-1234 791.5,-1234 791.5,-1198 890.5,-1198 890.5,-1234"/>
+<text text-anchor="middle" x="841" y="-1223.1" font-family="Times,serif" font-size="8.00" fill="#000000">runtime</text>
+<text text-anchor="middle" x="841" y="-1214.1" font-family="Times,serif" font-size="8.00" fill="#000000">gcDrain</text>
+<text text-anchor="middle" x="841" y="-1205.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
 </a>
 </g>
 </g>
-<!-- N26&#45;&gt;N9 -->
-<g id="edge9" class="edge">
-<title>N26&#45;&gt;N9</title>
-<g id="a_edge9"><a xlink:title="runtime.greyobject &#45;&gt; runtime.markBits.isMarked (20ms)">
-<path fill="none" stroke="#b25110" d="M1096,-714.807C1096,-694.4138 1096,-660.1606 1096,-629.3473"/>
-<polygon fill="#b25110" stroke="#b25110" points="1099.5001,-629.0544 1096,-619.0545 1092.5001,-629.0545 1099.5001,-629.0544"/>
+<!-- N25&#45;&gt;N26 -->
+<g id="edge24" class="edge">
+<title>N25&#45;&gt;N26</title>
+<g id="a_edge24"><a xlink:title="runtime.gcBgMarkWorker.func2 &#45;&gt; runtime.gcDrain (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M841,-1288.9663C841,-1275.688 841,-1258.6401 841,-1244.3624"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="844.5001,-1244.0924 841,-1234.0924 837.5001,-1244.0924 844.5001,-1244.0924"/>
 </a>
 </g>
-<g id="a_edge9&#45;label"><a xlink:title="runtime.greyobject &#45;&gt; runtime.markBits.isMarked (20ms)">
-<text text-anchor="middle" x="1123.5" y="-655.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 20ms</text>
-<text text-anchor="middle" x="1123.5" y="-640.8" font-family="Times,serif" font-size="14.00" fill="#000000"> (inline)</text>
-</a>
-</g>
-</g>
-<!-- N27&#45;&gt;N11 -->
-<g id="edge29" class="edge">
-<title>N27&#45;&gt;N11</title>
-<g id="a_edge29"><a xlink:title="runtime.memhash_varlen &#45;&gt; aeshashbody (10ms)">
-<path fill="none" stroke="#b28a61" d="M630.6735,-143.8239C628.3134,-125.3862 624.5962,-96.3456 621.6329,-73.1949"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="625.0735,-72.5064 620.3321,-63.0318 618.1301,-73.3952 625.0735,-72.5064"/>
-</a>
-</g>
-<g id="a_edge29&#45;label"><a xlink:title="runtime.memhash_varlen &#45;&gt; aeshashbody (10ms)">
-<text text-anchor="middle" x="648" y="-95.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<g id="a_edge24&#45;label"><a xlink:title="runtime.gcBgMarkWorker.func2 &#45;&gt; runtime.gcDrain (10ms)">
+<text text-anchor="middle" x="863" y="-1259.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
 </a>
 </g>
 </g>
-<!-- N28&#45;&gt;N24 -->
-<g id="edge4" class="edge">
-<title>N28&#45;&gt;N24</title>
-<g id="a_edge4"><a xlink:title="runtime.systemstack &#45;&gt; runtime.gcBgMarkWorker.func2 (50ms)">
-<path fill="none" stroke="#b22500" stroke-width="3" d="M1096,-1233.683C1096,-1221.1876 1096,-1204.2931 1096,-1189.542"/>
-<polygon fill="#b22500" stroke="#b22500" stroke-width="3" points="1099.5001,-1189.2732 1096,-1179.2733 1092.5001,-1189.2733 1099.5001,-1189.2732"/>
+<!-- N26&#45;&gt;N6 -->
+<g id="edge25" class="edge">
+<title>N26&#45;&gt;N6</title>
+<g id="a_edge25"><a xlink:title="runtime.gcDrain &#45;&gt; runtime.scanobject (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M841,-1197.785C841,-1182.3787 841,-1159.4992 841,-1138.366"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="844.5001,-1138.1722 841,-1128.1722 837.5001,-1138.1722 844.5001,-1138.1722"/>
 </a>
 </g>
-<g id="a_edge4&#45;label"><a xlink:title="runtime.systemstack &#45;&gt; runtime.gcBgMarkWorker.func2 (50ms)">
-<text text-anchor="middle" x="1118" y="-1200.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 50ms</text>
-</a>
-</g>
-</g>
-<!-- N29&#45;&gt;N15 -->
-<g id="edge31" class="edge">
-<title>N29&#45;&gt;N15</title>
-<g id="a_edge31"><a xlink:title="runtime.typedmemmove &#45;&gt; runtime.memmove (10ms)">
-<path fill="none" stroke="#b28a61" d="M766.7985,-143.8239C770.9497,-128.0997 777.1368,-104.6638 782.659,-83.7463"/>
-<polygon fill="#b28a61" stroke="#b28a61" points="786.0533,-84.6005 785.2219,-74.0383 779.2852,-82.8136 786.0533,-84.6005"/>
-</a>
-</g>
-<g id="a_edge31&#45;label"><a xlink:title="runtime.typedmemmove &#45;&gt; runtime.memmove (10ms)">
-<text text-anchor="middle" x="802" y="-95.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+<g id="a_edge25&#45;label"><a xlink:title="runtime.gcDrain &#45;&gt; runtime.scanobject (10ms)">
+<text text-anchor="middle" x="863" y="-1157.3" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
 </a>
 </g>
 </g>
-<!-- N30&#45;&gt;N2 -->
-<g id="edge6" class="edge">
-<title>N30&#45;&gt;N2</title>
-<g id="a_edge6"><a xlink:title="testing.(*B).runN &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 (50ms)">
-<path fill="none" stroke="#b22500" stroke-width="3" d="M580,-1229.9663C580,-1216.688 580,-1199.6401 580,-1185.3624"/>
-<polygon fill="#b22500" stroke="#b22500" stroke-width="3" points="583.5001,-1185.0924 580,-1175.0924 576.5001,-1185.0924 583.5001,-1185.0924"/>
+<!-- N27&#45;&gt;N2 -->
+<g id="edge1" class="edge">
+<title>N27&#45;&gt;N2</title>
+<g id="a_edge1"><a xlink:title="runtime.growWork &#45;&gt; runtime.evacuate (20ms)">
+<path fill="none" stroke="#b22100" stroke-width="3" d="M636,-852.8239C636,-841.9308 636,-827.3367 636,-812.4428"/>
+<polygon fill="#b22100" stroke="#b22100" stroke-width="3" points="639.5001,-812.1255 636,-802.1255 632.5001,-812.1255 639.5001,-812.1255"/>
 </a>
 </g>
-<g id="a_edge6&#45;label"><a xlink:title="testing.(*B).runN &#45;&gt; github.com/okamumu/go&#45;mdd/pkg/ft.BenchmarkBDDFT1 (50ms)">
-<text text-anchor="middle" x="602" y="-1200.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 50ms</text>
+<g id="a_edge1&#45;label"><a xlink:title="runtime.growWork &#45;&gt; runtime.evacuate (20ms)">
+<text text-anchor="middle" x="658" y="-823.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 20ms</text>
+</a>
+</g>
+</g>
+<!-- N28&#45;&gt;N25 -->
+<g id="edge26" class="edge">
+<title>N28&#45;&gt;N25</title>
+<g id="a_edge26"><a xlink:title="runtime.systemstack &#45;&gt; runtime.gcBgMarkWorker.func2 (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M841,-1383.5848C841,-1372.1105 841,-1357.0231 841,-1343.5774"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="844.5001,-1343.2465 841,-1333.2465 837.5001,-1343.2466 844.5001,-1343.2465"/>
+</a>
+</g>
+<g id="a_edge26&#45;label"><a xlink:title="runtime.systemstack &#45;&gt; runtime.gcBgMarkWorker.func2 (10ms)">
+<text text-anchor="middle" x="863" y="-1354.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N30 -->
+<g id="node30" class="node">
+<title>N30</title>
+<g id="a_node30"><a xlink:title="syscall.write (10ms)">
+<polygon fill="#edddd5" stroke="#b23c00" points="492.5,-173 393.5,-173 393.5,-137 492.5,-137 492.5,-173"/>
+<text text-anchor="middle" x="443" y="-162.1" font-family="Times,serif" font-size="8.00" fill="#000000">syscall</text>
+<text text-anchor="middle" x="443" y="-153.1" font-family="Times,serif" font-size="8.00" fill="#000000">write</text>
+<text text-anchor="middle" x="443" y="-144.1" font-family="Times,serif" font-size="8.00" fill="#000000">0 of 10ms (25.00%)</text>
+</a>
+</g>
+</g>
+<!-- N29&#45;&gt;N30 -->
+<g id="edge27" class="edge">
+<title>N29&#45;&gt;N30</title>
+<g id="a_edge27"><a xlink:title="syscall.Write &#45;&gt; syscall.write (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-223.9735C443,-212.1918 443,-196.5607 443,-183.1581"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-183.0033 443,-173.0034 439.5001,-183.0034 446.5001,-183.0033"/>
+</a>
+</g>
+<g id="a_edge27&#45;label"><a xlink:title="syscall.Write &#45;&gt; syscall.write (10ms)">
+<text text-anchor="middle" x="465" y="-194.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
+</a>
+</g>
+</g>
+<!-- N30&#45;&gt;N7 -->
+<g id="edge28" class="edge">
+<title>N30&#45;&gt;N7</title>
+<g id="a_edge28"><a xlink:title="syscall.write &#45;&gt; syscall.Syscall (10ms)">
+<path fill="none" stroke="#b23c00" stroke-width="2" d="M443,-136.5055C443,-125.5063 443,-110.9346 443,-96.5757"/>
+<polygon fill="#b23c00" stroke="#b23c00" stroke-width="2" points="446.5001,-96.212 443,-86.212 439.5001,-96.212 446.5001,-96.212"/>
+</a>
+</g>
+<g id="a_edge28&#45;label"><a xlink:title="syscall.write &#45;&gt; syscall.Syscall (10ms)">
+<text text-anchor="middle" x="465" y="-107.8" font-family="Times,serif" font-size="14.00" fill="#000000"> 10ms</text>
 </a>
 </g>
 </g>

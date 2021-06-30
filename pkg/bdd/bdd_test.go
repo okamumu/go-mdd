@@ -70,3 +70,14 @@ func TestBDD03(t *testing.T) {
 	b.ToDot(y)
 	b.ToDot(z)
 }
+
+func TestBDD04(t *testing.T) {
+	b := NewBDD0()
+	x := b.Var("x")
+	y := b.Var("y")
+	z := b.Imp(x, y)
+	fmt.Println(z)
+	b.ToDot(x)
+	b.ToDot(y)
+	b.ToDot(z)
+}

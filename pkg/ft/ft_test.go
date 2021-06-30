@@ -81,6 +81,7 @@ func makeTestData() ([]int, [][]int) {
 }
 
 func TestFT1(t *testing.T) {
+	fmt.Println("Run TestFT1")
 	labels := []int{0, 1, 2, 3, 4, 5, 6, 7}
 	vars := make([]*bdd.Node, len(labels))
 	b := bdd.NewBDD()
@@ -97,6 +98,26 @@ func TestFT1(t *testing.T) {
 	)
 	b.ToDot(ft)
 	fmt.Println(Ftmcs(b, ft))
+}
+
+func TestFT0(t *testing.T) {
+	fmt.Println("Run TestFT0")
+	labels := []int{0, 1, 2, 3, 4, 5, 6, 7}
+	vars := make([]*bdd.Node01, len(labels))
+	b := bdd.NewBDD0()
+	for i, x := range labels {
+		vars[i] = b.Var(fmt.Sprint(x))
+	}
+	ft := b.Or(
+		b.And(vars[2]),
+		b.And(vars[4], vars[0], vars[7]),
+		b.And(vars[3], vars[5], vars[2]),
+		b.And(vars[1], vars[7], vars[3]),
+		b.And(vars[5], vars[7], vars[3]),
+		b.And(vars[1], vars[2], vars[6]),
+	)
+	b.ToDot(ft)
+	fmt.Println(Ftmcs0(b, ft))
 }
 
 // func BenchmarkBDDFT(b *testing.B) {
@@ -120,6 +141,7 @@ func TestFT1(t *testing.T) {
 // }
 
 func TestBDDFTMCS1(t *testing.T) {
+	fmt.Println("Run TestBDDFTMCS1")
 	labels, result := makeTestData()
 	d := bdd.NewBDD()
 	vars := make(map[int]*bdd.Node)
@@ -140,6 +162,7 @@ func TestBDDFTMCS1(t *testing.T) {
 }
 
 func TestBDDFTMCS0(t *testing.T) {
+	fmt.Println("Run TestBDDFTMCS0")
 	labels, result := makeTestData()
 	d := bdd.NewBDD0()
 	vars := make(map[int]*bdd.Node01)
@@ -195,30 +218,31 @@ func TestBDDFTMCS0(t *testing.T) {
 	fmt.Println(mcs)
 }
 
-func BenchmarkBDDFT1(b *testing.B) {
-	labels, result := makeTestData()
-	d := bdd.NewBDD()
-	vars := make(map[int]*bdd.Node)
-	vars2 := make(map[string]*bdd.Node)
-	for _, x := range labels {
-		vars[x] = d.Var(fmt.Sprint(x))
-		vars2[fmt.Sprint(x)] = vars[x]
-	}
-	b.ResetTimer()
-	fts := []*bdd.Node{}
-	for _, xs := range result {
-		ans := make([]*bdd.Node, 0, len(xs))
-		for _, x := range xs {
-			ans = append(ans, vars[x])
-		}
-		fts = append(fts, d.And(ans...))
-	}
-	ft := d.Or(fts...)
-	mcs := Ftmcs(d, ft)
-	fmt.Println(mcs)
-}
+// func BenchmarkBDDFT1(b *testing.B) {
+// 	labels, result := makeTestData()
+// 	d := bdd.NewBDD()
+// 	vars := make(map[int]*bdd.Node)
+// 	vars2 := make(map[string]*bdd.Node)
+// 	for _, x := range labels {
+// 		vars[x] = d.Var(fmt.Sprint(x))
+// 		vars2[fmt.Sprint(x)] = vars[x]
+// 	}
+// 	b.ResetTimer()
+// 	fts := []*bdd.Node{}
+// 	for _, xs := range result {
+// 		ans := make([]*bdd.Node, 0, len(xs))
+// 		for _, x := range xs {
+// 			ans = append(ans, vars[x])
+// 		}
+// 		fts = append(fts, d.And(ans...))
+// 	}
+// 	ft := d.Or(fts...)
+// 	mcs := Ftmcs(d, ft)
+// 	fmt.Println(mcs)
+// }
 
 func BenchmarkBDDFT0(b *testing.B) {
+	fmt.Println("Run BenchBDDFT0")
 	labels, result := makeTestData()
 	d := bdd.NewBDD0()
 	vars := make(map[int]*bdd.Node01)

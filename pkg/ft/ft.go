@@ -1,7 +1,7 @@
 package ft
 
 import (
-	_ "fmt"
+	"fmt"
 	"github.com/okamumu/go-mdd/pkg/bdd"
 )
 
@@ -90,6 +90,9 @@ func Ftmcs0(b *bdd.BDD0, f *bdd.Node01) [][]string {
 	r := f
 	for !(r.Node0 == b.Zero && r.Neg == false) {
 		s, minf := ftmcs0(b, vars, r)
+		fmt.Println("minf:")
+		fmt.Println(minf)
+		b.ToDot(minf)
 		for _, x := range s {
 			result = append(result, x)
 		}
@@ -132,6 +135,7 @@ func getMinPath0(b *bdd.BDD0, f *bdd.Node0, fneg bool, path []string, s *minPath
 	case f != b.Zero:
 		n0, b0 := f.Zero(fneg)
 		getMinPath0(b, n0, b0, path, s)
+
 		path = append(path, f.Label())
 		n1, b1 := f.One(fneg)
 		getMinPath0(b, n1, b1, path, s)

@@ -5,8 +5,10 @@ import (
 )
 
 type Node0 struct {
-	*Node
-	notedge bool // indicator whether 1-edge is not-edge or not
+	id      Id
+	header  *NodeHeader // info of Node
+	nodes   [2]*Node0   // the pointer for Nodes
+	notedge bool        // indicator whether 1-edge is not-edge or not
 }
 
 func (n *Node0) hasNotEdge() bool {
@@ -20,18 +22,41 @@ type Node01 struct {
 
 // struct to identify a node
 type nodeId0 struct {
-	head Id
-	low  Id
-	high Id
-	not  bool
+	h   Id
+	f   Id
+	g   Id
+	neg bool
+}
+
+type UniqueNodeTable0 struct {
+	buf   nodeId0
+	table map[nodeId]*Node01
+}
+
+func NewUniqueNodeTable0() *UniqueNodeTable0 {
+	return &UniqueNodeTable0{
+		buf:   nodeId0{0, 0, 0, false},
+		table: make(map[nodeId0]*Node01),
+	}
+}
+
+func (t *UniqueNodeTable0) get(head *NodeHeader, low, high *Node) (*Node, bool) {
+	t.buf.head, t.buf.low, t.buf.high = head.id, low.id, high.id
+	v, ok := t.table[t.buf]
+	return v, ok
+}
+
+func (t *UniqueNodeTable) set(head *NodeHeader, low, high, x *Node) {
+	t.buf.head, t.buf.low, t.buf.high = head.id, low.id, high.id
+	t.table[t.buf] = x
 }
 
 // struct for operation cache
 type tupleNode0 struct {
-	left  Id
-	lneg  bool
-	right Id
-	rneg  bool
+	f    Id
+	g    Id
+	fneg bool
+	gneg bool
 }
 
 type BDD0 struct {
@@ -42,27 +67,35 @@ type BDD0 struct {
 	cacheOr  map[tupleNode0]*Node01
 	cacheAnd map[tupleNode0]*Node01
 	cacheXor map[tupleNode0]*Node01
+	key1     nodeId0
+	key2     tupleNode0
 }
 
 func NewBDD0() *BDD0 {
 	h := &NodeHeader{
+		id:    0,
 		level: 0,
 	}
 	zero := &Node0{
+		id:     0,
 		header: h,
 	}
 	return &BDD0{
+		total:    1,
 		headers:  []*NodeHeader{h},
 		nodes:    make(map[nodeId0]*Node0),
 		Zero:     zero,
 		cacheOr:  make(map[tupleNode0]*Node01),
 		cacheAnd: make(map[tupleNode0]*Node01),
 		cacheXor: make(map[tupleNode0]*Node01),
+		key1:     nodeId0{},
+		key2:     tupleNode0{},
 	}
 }
 
 func (b *BDD0) Var(name string) *Node01 {
 	h := &NodeHeader{
+		id:    Id(len(b.headers)),
 		level: Level(len(b.headers)),
 		label: name,
 	}
@@ -126,19 +159,11 @@ func (b *BDD0) Ite(f, g, h *Node01) *Node01 {
 }
 
 func (n *Node0) Zero(neg bool) (*Node0, bool) {
-	if neg == true {
-		return n.nodes[0], true
-	} else {
-		return n.nodes[0], false
-	}
+	return n.nodes[0], neg
 }
 
 func (n *Node0) One(neg bool) (*Node0, bool) {
-	if neg == true {
-		return n.nodes[1], !n.notedge
-	} else {
-		return n.nodes[1], n.notedge
-	}
+	return n.nodes[1], (neg && !n.hasNotEdge()) || (!neg && n.hasNotEdge())
 }
 
 func (n *Node0) Level() Level {
@@ -153,16 +178,19 @@ func (b *BDD0) createNode(h *NodeHeader, low *Node0, lneg bool, high *Node0, hne
 	if low == high && lneg == hneg {
 		return low, lneg
 	}
-	key := nodeId0{h, low, high, lneg != hneg}
-	if node, ok := b.nodes[key]; ok {
+	hneg = lneg != hneg
+	b.key1.h, b.key1.f, b.key1.g, b.key1.neg = h.id, low.id, high.id, hneg
+	if node, ok := b.nodes[b.key1]; ok {
 		return node, lneg
 	}
 	node := &Node0{
+		id:      b.total,
 		header:  h,
 		nodes:   [2]*Node0{low, high},
-		notedge: lneg != hneg,
+		notedge: hneg,
 	}
-	b.nodes[key] = node
+	b.total++
+	b.nodes[b.key1] = node
 	return node, lneg
 }
 
@@ -179,8 +207,8 @@ func (b *BDD0) and(f *Node0, fneg bool, g *Node0, gneg bool) (*Node0, bool) {
 	case g == b.Zero && gneg == true:
 		return f, fneg
 	}
-	key := tupleNode0{f, fneg, g, gneg}
-	if node, ok := b.cacheAnd[key]; ok {
+	b.key2.f, b.key2.g, b.key2.fneg, b.key2.gneg = f.id, g.id, fneg, gneg
+	if node, ok := b.cacheAnd[b.key2]; ok {
 		return node.Node0, node.Neg
 	}
 	var result *Node0
@@ -207,7 +235,8 @@ func (b *BDD0) and(f *Node0, fneg bool, g *Node0, gneg bool) (*Node0, bool) {
 		n11, b11 := b.and(fn10, fb10, gn10, gb10)
 		result, resneg = b.createNode(f.header, n01, b01, n11, b11)
 	}
-	b.cacheAnd[key] = &Node01{result, resneg}
+	b.key2.f, b.key2.g, b.key2.fneg, b.key2.gneg = f.id, g.id, fneg, gneg
+	b.cacheAnd[b.key2] = &Node01{result, resneg}
 	return result, resneg
 }
 
@@ -220,8 +249,8 @@ func (b *BDD0) or(f *Node0, fneg bool, g *Node0, gneg bool) (*Node0, bool) {
 	case g == b.Zero && gneg == false:
 		return f, fneg
 	}
-	key := tupleNode0{f, fneg, g, gneg}
-	if node, ok := b.cacheOr[key]; ok {
+	b.key2.f, b.key2.g, b.key2.fneg, b.key2.gneg = f.id, g.id, fneg, gneg
+	if node, ok := b.cacheOr[b.key2]; ok {
 		return node.Node0, node.Neg
 	}
 	var result *Node0
@@ -248,7 +277,8 @@ func (b *BDD0) or(f *Node0, fneg bool, g *Node0, gneg bool) (*Node0, bool) {
 		n11, b11 := b.or(fn10, fb10, gn10, gb10)
 		result, resneg = b.createNode(f.header, n01, b01, n11, b11)
 	}
-	b.cacheOr[key] = &Node01{result, resneg}
+	b.key2.f, b.key2.g, b.key2.fneg, b.key2.gneg = f.id, g.id, fneg, gneg
+	b.cacheOr[b.key2] = &Node01{result, resneg}
 	return result, resneg
 }
 
@@ -263,8 +293,8 @@ func (b *BDD0) xor(f *Node0, fneg bool, g *Node0, gneg bool) (*Node0, bool) {
 	case g == b.Zero && gneg == false:
 		return f, fneg
 	}
-	key := tupleNode0{f, fneg, g, gneg}
-	if node, ok := b.cacheXor[key]; ok {
+	b.key2.f, b.key2.g, b.key2.fneg, b.key2.gneg = f.id, g.id, fneg, gneg
+	if node, ok := b.cacheXor[b.key2]; ok {
 		return node.Node0, node.Neg
 	}
 	var result *Node0
@@ -291,7 +321,8 @@ func (b *BDD0) xor(f *Node0, fneg bool, g *Node0, gneg bool) (*Node0, bool) {
 		n11, b11 := b.xor(fn10, fb10, gn10, gb10)
 		result, resneg = b.createNode(f.header, n01, b01, n11, b11)
 	}
-	b.cacheXor[key] = &Node01{result, resneg}
+	b.key2.f, b.key2.g, b.key2.fneg, b.key2.gneg = f.id, g.id, fneg, gneg
+	b.cacheXor[b.key2] = &Node01{result, resneg}
 	return result, resneg
 }
 
